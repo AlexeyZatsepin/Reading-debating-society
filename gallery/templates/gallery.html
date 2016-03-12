@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block main %}
+    <main>
+
+               <section class="site_main">
+		<div class="container">
+			<div class="row">
+
+                <div class="col-md-2">
+					<aside class="year_aside">
+                     <h2 class="p_bold">Sort albums by year</h2>
+
+                        <a href="#" class="year_button hvr-sweep-to-bottom">2016</a>
+                        <a href="#" class="year_button hvr-sweep-to-bottom">2015</a>
+                        <a href="#" class="year_button hvr-sweep-to-bottom">2014</a>
+                        <a href="#" class="year_button hvr-sweep-to-bottom">2013</a>
+                        <a href="#" class="year_button hvr-sweep-to-bottom">2012</a>
+                        <a href="#" class="year_button hvr-sweep-to-bottom">2011</a>
+                        <a href="#" class="year_button hvr-sweep-to-bottom">2010</a>
+                        <a href="#" class="year_button hvr-sweep-to-bottom">2009</a>
+                        <a href="#" class="year_button hvr-sweep-to-bottom">2008</a>
+                        <a href="#" class="year_button hvr-sweep-to-bottom">2007</a>
+                        <a href="#" class="year_button hvr-sweep-to-bottom">2006</a>
+                        <a href="#" class="year_button hvr-sweep-to-bottom">2005</a>
+					</aside>
+				</div>
+
+                <div class="col-md-10">
+				<div class="col-sm-6">
+					<div class="gallery_block clearfix">
+				        <a href="{{ albums.get_absolute_url }}"><img src="img/owl1.jpg" alt="album1" ></a>
+                        <div class="gallery_block_left">
+                            <i class="fa fa-camera"></i>
+                            <span class="hint">Album</span>
+                            <span>Debating process</span>
+                        </div>
+                        <div class="gallery_block_right">
+                            <i class="fa fa-clock-o"></i>
+                            <span>12.2015</span>
+                        </div>
+					</div>
+				</div>
+
+                <div class="col-sm-6">
+					<div class="gallery_block clearfix">
+                        <a href="#"><img src="img/owl2.jpg" alt="album2" ></a>
+                        <div class="gallery_block_left">
+                            <i class="fa fa-camera"></i>
+                            <span class="hint">Album</span>
+                            <span>President speech</span>
+                        </div>
+                        <div class="gallery_block_right">
+                            <i class="fa fa-clock-o"></i>
+                            <span>09.2015</span>
+                        </div>
+					</div>
+				</div>
+
+
+
+
+                <div class="col-sm-6">
+					<div class="gallery_block clearfix">
+                        <a href="#"><img src="img/owl3.jpg" alt="album3" ></a>
+                        <div class="gallery_block_left">
+                            <i class="fa fa-camera"></i>
+                            <span class="hint">Album</span>
+                            <span>We on TV show</span>
+                        </div>
+                        <div class="gallery_block_right">
+                            <i class="fa fa-clock-o"></i>
+                            <span>05.2014</span>
+                        </div>
+					</div>
+				</div>
+
+
+
+                <div class="col-sm-6">
+					<div class="gallery_block clearfix">
+                        <a href="#"><img src="img/owl4.jpg" alt="album4" ></a>
+                        <div class="gallery_block_left">
+                            <i class="fa fa-camera"></i>
+                            <span class="hint">Album</span>
+                            <span>Graduate day</span>
+                        </div>
+                        <div class="gallery_block_right">
+                            <i class="fa fa-clock-o"></i>
+                            <span>01.2014</span>
+                        </div>
+					</div>
+				</div>
+
+                <div class="col-sm-6">
+					<div class="gallery_block clearfix debating_info">
+                        <a href="#"><img src="img/owl5.jpg" alt="album5" ></a>
+                        <div class="gallery_block_left">
+                            <i class="fa fa-camera"></i>
+                            <span class="hint">Album</span>
+                            <span>Our boss</span>
+                        </div>
+                        <div class="gallery_block_right">
+                            <i class="fa fa-clock-o"></i>
+                            <span>09.2012</span>
+                        </div>
+					</div>
+				</div>
+                </div>
+             </div>
+		</div>
+	</section>
+
+    </main>
+{% endblock %}

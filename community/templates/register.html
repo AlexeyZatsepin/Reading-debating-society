@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+{% block main %}
+
+
+    <main>
+
+       <section class="site_main">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<div class="welcome debating_info regalumni_main clearfix">
+
+
+									<h2>Our Alumni Association</h2>
+
+
+									<p>This database will feature all Reading University Debate Society alumni and their current occupations. We are hoping to stay in touch with all our previous members. We are also hoping that common hobby can unite people and that the new members can use this search to contact alumni for professional networking purposes.  </p>
+
+                                    {% if form.errors %}
+                                        <p class="p_bold" style="color: red">Please check errors</p>
+                                    {% else %}
+                                        <p class="p_bold">Register, it will take you no more than a minute. </p>
+                                    {% endif %}
+
+                    <div class="form_block">
+                        <form method="post" action="{% url 'registr' %}">
+                            {% csrf_token %}
+                            <div class="input_group">
+                              {{ form.first_name|attr:"autofocus"  }}
+                              <span class="highlight"></span>
+                              <span class="bar"></span>
+                              <span class="error">{{ form.first_name.errors }}</span>
+                              <label>First name *</label>
+                            </div>
+
+                            <div class="input_group">
+                              {{ form.last_name }}
+                              <span class="highlight"></span>
+                              <span class="bar"></span>
+                                <span class="error">{{ form.last_name.errors }}</span>
+                              <label>Last name *</label>
+                            </div>
+
+                           <div class="input_group">
+                              {{ form.email }}
+                              <span class="highlight"></span>
+                              <span class="bar"></span>
+                               <span class="error">{{ form.email.errors }}</span>
+                              <label>Email (user@example.com) *</label>
+                            </div>
+
+                            <div class="input_group">
+                              {{ form.facebook }}
+                              <span class="highlight"></span>
+                              <span class="bar"></span>
+                                <span class="error">{{ form.facebook.errors }}</span>
+                              <label>Facebook (url)</label>
+                            </div>
+
+                            <div class="input_group">
+                              {{ form.linkedin }}
+                              <span class="highlight"></span>
+                              <span class="bar"></span>
+                                <span class="error">{{ form.linkedin.errors }}</span>
+                              <label>LinkedIn (url)</label>
+                            </div>
+
+                            <div class="input_group">
+                              {{ form.time_in_society }}
+                              <span class="highlight"></span>
+                              <span class="bar"></span>
+                                <span class="error">{{ form.time_in_society.errors }}</span>
+                              <label>Years at society (e.g. 2014-2015)</label>
+                            </div>
+
+                            <div class="input_group">
+                              {{ form.current_occupation }}
+                              <span class="highlight"></span>
+                              <span class="bar"></span>
+                                <span class="error">{{ form.current_occupation.errors }}</span>
+                              <label>Current occupation (pounds)</label>
+                            </div>
+
+                            <div class="input_group">
+                              {{ form.courses }}
+                              <span class="highlight"></span>
+                              <span class="bar"></span>
+                                <span class="error">{{ form.courses.errors }}</span>
+                              <label>Course stydied at Reading</label>
+                            </div>
+
+                            <div class="input_group">
+                              {{ form.current_company }}
+                              <span class="highlight"></span>
+                              <span class="bar"></span>
+                                <span class="error">{{ form.current_company.errors }}</span>
+                              <label>Current company</label>
+                            </div>
+
+                            <input class="button button_checkdb" type="submit" value="Register as alumni">
+
+                        </form>
+                </div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<aside class="right_aside debating_right_aside regalumni_aside">
+                     <h2>Contact alumni</h2>
+
+
+									<p>Now we have the page where you will be able to see <span class="p_bold">information on any graduate</span> !</p>
+
+									<p>You can search an alumni by <span class="p_bold">Year, Current occupation, Current company</span> and much more!</p>
+                                 <a href="#" class="button button_checkdb">Check all alumni database</a>
+					</aside>
+				</div>
+			</div>
+		</div>
+	</section>
+
+    </main>
+
+
+{% endblock %}

@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block main %}
+ {% if form %}
+     <main>
+
+       <section class="site_main">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<div class="welcome debating_info clearfix">
+
+
+									<h2>Let's talk</h2>
+
+
+									<i class="fa fa-envelope"></i>
+
+                        <div class="form_block">
+                        <form action="{% url 'contact' %}" method="post">{% csrf_token %}
+
+                            <div class="input_group">
+                              {{ form.subject }}
+                              <span class="highlight"></span>
+                              <span class="bar"></span>
+                              <span class="error">{{ form.subject.errors }}</span>
+                              <label>Subject</label>
+                            </div>
+
+                           <div class="input_group">
+                              {{ form.sender }}
+                              <span class="highlight"></span>
+                              <span class="bar"></span>
+                              <span class="error">{{ form.sender.errors }}</span>
+                              <label>Your email (user@example.com)</label>
+                            </div>
+
+                            <div class="input_group textarea_block">
+                              {{ form.message }}
+                              <span class="highlight"></span>
+                              <span class="bar"></span>
+                              <span class="error">{{ form.message.errors }}</span>
+                              <label>Message</label>
+                            </div>
+
+                            <input class="button button_checkdb" type="submit" value="Send">
+
+                        </form>
+                    </div>
+
+					</div>
+				</div>
+				<div class="col-md-4">
+					<aside class="right_aside debating_right_aside contact_aside">
+                       <h2>Contact information</h2>
+                        <p><span class="p_bold">Our email:</span>  <span class="email_span">readingdebatesociety@gmail.com</span></p>
+                        <p><span class="p_bold">Postal address:</span> <br>
+                        Debate Society<br>
+                        Reading University Students' Union<br>
+                        PO Box 230<br>
+                        Whiteknights<br>
+                        Reading<br>
+                        RG6 6AZ<br>
+                        </p>
+					</aside>
+				</div>
+			</div>
+		</div>
+	</section>
+
+    </main>
+ {% else %}
+    <p>{{ thanks }}</p>
+ {% endif %}
+
+{% endblock %}

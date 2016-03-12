@@ -1,0 +1,142 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Debate Society Responsive" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" href="{% static 'img/readinglogo.png'%}" />
+	<title>Debate Society</title>
+    <link rel="stylesheet" href="{% static 'libs/bootstrap/bootstrap-grid-3.3.1.min.css'%}" />
+	<link rel="stylesheet" href="{% static 'libs/font-awesome-4.2.0/css/font-awesome.min.css'%}" />
+	<link rel="stylesheet" href="{% static 'libs/fancybox/jquery.fancybox.css'%}" />
+	<link rel="stylesheet" href="{% static 'libs/owl-carousel/owl.carousel.css' %}" />
+	<link rel="stylesheet" href="{% static 'libs/countdown/jquery.countdown.css'%}" />
+	<link rel="stylesheet" href="{% static 'css/fonts.css'%}" />
+	<link rel="stylesheet" href="{% static 'css/main.css' %}" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+<body>
+
+
+
+	<header class="top_header">
+		<div class="header_topline clearfix">
+			<div class="container">
+				<div class="col-md-12">
+					<div class="row">
+                        <div class="site_logo">
+							<a title="Home page" href="{% url 'welcome' %}"><img src="{% static 'img/logologo.png'%}" height="76" width="95" alt="Logo" ></a>
+						</div>
+						<div class="soc_buttons">
+							<a class="soc_buttons_fb" href="https://www.facebook.com/groups/readingdebate/">
+                                <i class="fa fa-facebook-square"></i>
+                            </a>
+							<a class="soc_buttons_rusu" href="http://www.rusu.co.uk/societies/debate/">
+                                <img src="{% static 'img/Rusu-white.png'%}" width="100" height="12" alt="RUSU" >
+                            </a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+        <div class="header_titleline">
+		   <div class="container">
+			   <div class="col-md-12">
+                   <div class="row">
+                     <p class="logo">
+                         <a title="Home page" href="{% url 'welcome' %}"><span>Reading</span> Debate Society</a>
+                     </p>
+
+				   </div>
+               </div>
+           </div>
+        </div>
+
+
+	 <nav class="clearfix">
+		<ul>
+          <a href="{% url 'registr' %}" class="active"><li>Alumni</li></a>
+		  <a href="{% url 'debating' %}"><li>Debating</li></a>
+		  <a href="{% url 'materials' %}"><li>Learning materials</li></a>
+		  <a href="{% url 'events' %}"><li>Events</li></a>
+          <a href="{% url 'committee' %}"><li>Committee</li></a>
+          <a href="{% url 'sponsors' %}"><li>Sponsors</li></a>
+          <a href="{% url 'gallery' %}"><li>Gallery</li></a>
+          <a href="{% url 'contact' %}"><li>Contact us</li></a>
+          <input type="search" placeholder="Search" >
+		</ul>
+
+		<div class="handle"><i class="fa fa-bars"></i></div>
+        <div class="handle_search"><input type="search" placeholder="Search" ></div>
+
+	 </nav>
+
+    </header>
+
+    {% block main %}{% endblock %}
+
+    <footer class="site_footer">
+            <div class="footer_mainline">
+			<div class="container">
+				<div class="col-md-12">
+					<div class="row">
+
+						<div class="footer_links">
+                            <h3>Useful links</h3>
+							<a class="footer_link" href="https://www.facebook.com/groups/readingdebate/">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+							<a class="footer_link phone" href="#">
+                                <i class="fa fa-phone"></i>
+                            </a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+            </div>
+
+            <div class="footer_bottomline">
+                <div class="container">
+				<div class="col-md-12">
+					<div class="row">
+                        © 2016 <span>Kozhara</span>-<span>Zatsepin</span>. All rights reserved.
+                    </div>
+				</div>
+			    </div>
+
+            </div>
+
+
+    </footer>
+    <!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+	<![endif]-->
+	<script src="{% static 'libs/jquery/jquery-1.11.1.min.js'%}"></script>
+	<script src="{% static 'libs/jquery-mousewheel/jquery.mousewheel.min.js'%}"></script>
+	<script src="{% static 'libs/fancybox/jquery.fancybox.pack.js'%}"></script>
+	<script src="{% static 'libs/waypoints/waypoints-1.6.2.min.js'%}"></script>
+	<script src="{% static 'libs/scrollto/jquery.scrollTo.min.js'%}"></script>
+	<script src="{% static 'libs/owl-carousel/owl.carousel.min.js'%}"></script>
+	<script src="{% static 'libs/countdown/jquery.plugin.js'%}"></script>
+	<script src="{% static 'libs/countdown/jquery.countdown.min.js'%}"></script>
+	<script src="{% static 'libs/countdown/jquery.countdown-ru.js'%}"></script>
+	<script src="{% static 'libs/landing-nav/navigation.js'%}"></script>
+	<script src="{% static 'js/common.js'%}"></script>
+	<script>
+		$('.handle').on('click', function(){
+		$('nav ul').toggleClass('showing');
+		});
+	</script>
+</body>
+</html>
