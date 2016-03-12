@@ -11,7 +11,14 @@ except IOError:
 # IMPORTANT: Put any additional includes below this line.  If placed above this
 # line, it's possible required libraries won't be in your searchable path
 #
+import sys
+import django.core.handlers.wsgi
 
+os.environ['DJANGO_SETTINGS_MODULE'] = os.environ['OPENSHIFT_APP_NAME']+'.settings'
+sys.path.append(os.path.join(os.environ['OPENSHIFT_REPO_DIR'], 'wsgi', os.environ['OPENSHIFT_APP_NAME']))
+application = django.core.handlers.wsgi.WSGIHandler()
+
+'''
 def application(environ, start_response):
 
     ctype = 'text/plain'
@@ -23,7 +30,7 @@ def application(environ, start_response):
         response_body = '\n'.join(response_body)
     else:
         ctype = 'text/html'
-        response_body = '''<!doctype html>
+        response_body = '<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -289,14 +296,14 @@ $ git push</pre>
         </footer>
 </section>
 </body>
-</html>'''
+</html>'
 
     status = '200 OK'
     response_headers = [('Content-Type', ctype), ('Content-Length', str(len(response_body)))]
     #
     start_response(status, response_headers)
     return [response_body]
-
+'''
 #
 # Below for testing only
 #
