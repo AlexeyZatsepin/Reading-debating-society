@@ -12,9 +12,9 @@
   </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/static" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/static/js" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/static/css" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/wsgi/static/js" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/wsgi/static/css" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/wsgi/static" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/.openshift/action_hooks" />
       <excludeFolder url="file://$MODULE_DIR$/.openshift/cron" />
     </content>
@@ -30,6 +30,7 @@
         <option value="$MODULE_DIR$/gallery/templates" />
         <option value="$MODULE_DIR$/materials/templates" />
         <option value="$MODULE_DIR$/templates" />
+        <option value="$MODULE_DIR$/templates/admin" />
       </list>
     </option>
   </component>

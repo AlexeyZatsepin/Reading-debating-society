@@ -2,8 +2,136 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f957d364-d08c-4e0f-8251-3c2c9de788e7" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/app/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wsgi/static/libs/jquery-mousewheel/jquery.mousewheel.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/jquery.mousewheel.min.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/libs/jquery-mousewheel/jquery.mousewheel.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/libs/lightgallery/jquery.mousewheel.min.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/css/fonts.css" afterPath="$PROJECT_DIR$/wsgi/static/css/fonts.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/css/main.css" afterPath="$PROJECT_DIR$/wsgi/static/css/main.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/Effra_Bold/Effra_Std_Bd.ttf" afterPath="$PROJECT_DIR$/wsgi/static/fonts/Effra_Bold/Effra_Std_Bd.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/RobotoBold/RobotoBold.eot" afterPath="$PROJECT_DIR$/wsgi/static/fonts/RobotoBold/RobotoBold.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/RobotoBold/RobotoBold.ttf" afterPath="$PROJECT_DIR$/wsgi/static/fonts/RobotoBold/RobotoBold.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/RobotoBold/RobotoBold.woff" afterPath="$PROJECT_DIR$/wsgi/static/fonts/RobotoBold/RobotoBold.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/RobotoCondensedBold/RobotoCondensedBold.eot" afterPath="$PROJECT_DIR$/wsgi/static/fonts/RobotoCondensedBold/RobotoCondensedBold.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/RobotoCondensedBold/RobotoCondensedBold.ttf" afterPath="$PROJECT_DIR$/wsgi/static/fonts/RobotoCondensedBold/RobotoCondensedBold.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/RobotoCondensedBold/RobotoCondensedBold.woff" afterPath="$PROJECT_DIR$/wsgi/static/fonts/RobotoCondensedBold/RobotoCondensedBold.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/RobotoCondensedLight/RobotoCondensedLight.eot" afterPath="$PROJECT_DIR$/wsgi/static/fonts/RobotoCondensedLight/RobotoCondensedLight.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/RobotoCondensedLight/RobotoCondensedLight.ttf" afterPath="$PROJECT_DIR$/wsgi/static/fonts/RobotoCondensedLight/RobotoCondensedLight.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/RobotoCondensedLight/RobotoCondensedLight.woff" afterPath="$PROJECT_DIR$/wsgi/static/fonts/RobotoCondensedLight/RobotoCondensedLight.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/RobotoCondensedRegular/RobotoCondensedRegular.eot" afterPath="$PROJECT_DIR$/wsgi/static/fonts/RobotoCondensedRegular/RobotoCondensedRegular.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/RobotoCondensedRegular/RobotoCondensedRegular.ttf" afterPath="$PROJECT_DIR$/wsgi/static/fonts/RobotoCondensedRegular/RobotoCondensedRegular.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/RobotoCondensedRegular/RobotoCondensedRegular.woff" afterPath="$PROJECT_DIR$/wsgi/static/fonts/RobotoCondensedRegular/RobotoCondensedRegular.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/RobotoLight/RobotoLight.eot" afterPath="$PROJECT_DIR$/wsgi/static/fonts/RobotoLight/RobotoLight.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/RobotoLight/RobotoLight.ttf" afterPath="$PROJECT_DIR$/wsgi/static/fonts/RobotoLight/RobotoLight.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/RobotoLight/RobotoLight.woff" afterPath="$PROJECT_DIR$/wsgi/static/fonts/RobotoLight/RobotoLight.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/RobotoMedium/RobotoMedium.eot" afterPath="$PROJECT_DIR$/wsgi/static/fonts/RobotoMedium/RobotoMedium.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/RobotoMedium/RobotoMedium.ttf" afterPath="$PROJECT_DIR$/wsgi/static/fonts/RobotoMedium/RobotoMedium.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/RobotoMedium/RobotoMedium.woff" afterPath="$PROJECT_DIR$/wsgi/static/fonts/RobotoMedium/RobotoMedium.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/RobotoRegular/RobotoRegular.eot" afterPath="$PROJECT_DIR$/wsgi/static/fonts/RobotoRegular/RobotoRegular.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/RobotoRegular/RobotoRegular.ttf" afterPath="$PROJECT_DIR$/wsgi/static/fonts/RobotoRegular/RobotoRegular.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/RobotoRegular/RobotoRegular.woff" afterPath="$PROJECT_DIR$/wsgi/static/fonts/RobotoRegular/RobotoRegular.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/merriweather/merriweather.css" afterPath="$PROJECT_DIR$/wsgi/static/fonts/merriweather/merriweather.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/merriweather/merriweatherregular.ttf" afterPath="$PROJECT_DIR$/wsgi/static/fonts/merriweather/merriweatherregular.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/merriweather/merriweatherregular.woff" afterPath="$PROJECT_DIR$/wsgi/static/fonts/merriweather/merriweatherregular.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/fonts/merriweather/merriweatherregular.woff2" afterPath="$PROJECT_DIR$/wsgi/static/fonts/merriweather/merriweatherregular.woff2" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/1-1600.jpg" afterPath="$PROJECT_DIR$/wsgi/static/img/1-1600.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/1-375.jpg" afterPath="$PROJECT_DIR$/wsgi/static/img/1-375.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/1-480.jpg" afterPath="$PROJECT_DIR$/wsgi/static/img/1-480.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/1.jpg" afterPath="$PROJECT_DIR$/wsgi/static/img/1.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/13-1600.jpg" afterPath="$PROJECT_DIR$/wsgi/static/img/13-1600.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/13-375.jpg" afterPath="$PROJECT_DIR$/wsgi/static/img/13-375.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/13-480.jpg" afterPath="$PROJECT_DIR$/wsgi/static/img/13-480.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/13.jpg" afterPath="$PROJECT_DIR$/wsgi/static/img/13.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/2-1600.jpg" afterPath="$PROJECT_DIR$/wsgi/static/img/2-1600.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/2-375.jpg" afterPath="$PROJECT_DIR$/wsgi/static/img/2-375.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/2-480.jpg" afterPath="$PROJECT_DIR$/wsgi/static/img/2-480.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/2.jpg" afterPath="$PROJECT_DIR$/wsgi/static/img/2.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/4-1600.jpg" afterPath="$PROJECT_DIR$/wsgi/static/img/4-1600.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/4-375.jpg" afterPath="$PROJECT_DIR$/wsgi/static/img/4-375.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/4-480.jpg" afterPath="$PROJECT_DIR$/wsgi/static/img/4-480.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/4.jpg" afterPath="$PROJECT_DIR$/wsgi/static/img/4.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/Info-icon.png" afterPath="$PROJECT_DIR$/wsgi/static/img/Info-icon.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/Rusu-white.png" afterPath="$PROJECT_DIR$/wsgi/static/img/Rusu-white.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/debate_new_logo.jpg" afterPath="$PROJECT_DIR$/wsgi/static/img/debate_new_logo.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/favicon.png" afterPath="$PROJECT_DIR$/wsgi/static/img/favicon.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/graduate-icon.png" afterPath="$PROJECT_DIR$/wsgi/static/img/graduate-icon.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/icon.png" afterPath="$PROJECT_DIR$/wsgi/static/img/icon.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/logologo.png" afterPath="$PROJECT_DIR$/wsgi/static/img/logologo.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/owl1.jpg" afterPath="$PROJECT_DIR$/wsgi/static/img/owl1.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/owl2.jpg" afterPath="$PROJECT_DIR$/wsgi/static/img/owl2.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/owl3.jpg" afterPath="$PROJECT_DIR$/wsgi/static/img/owl3.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/owl4.jpg" afterPath="$PROJECT_DIR$/wsgi/static/img/owl4.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/owl5.jpg" afterPath="$PROJECT_DIR$/wsgi/static/img/owl5.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/owl6.jpg" afterPath="$PROJECT_DIR$/wsgi/static/img/owl6.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/readinglogo.png" afterPath="$PROJECT_DIR$/wsgi/static/img/readinglogo.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/sponsor1.jpg" afterPath="$PROJECT_DIR$/wsgi/static/img/sponsor1.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/sponsor2.png" afterPath="$PROJECT_DIR$/wsgi/static/img/sponsor2.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/sponsor3.png" afterPath="$PROJECT_DIR$/wsgi/static/img/sponsor3.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/sponsor4.png" afterPath="$PROJECT_DIR$/wsgi/static/img/sponsor4.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/sponsor5.png" afterPath="$PROJECT_DIR$/wsgi/static/img/sponsor5.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/thumb-1.jpg" afterPath="$PROJECT_DIR$/wsgi/static/img/thumb-1.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/thumb-13.jpg" afterPath="$PROJECT_DIR$/wsgi/static/img/thumb-13.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/thumb-2.jpg" afterPath="$PROJECT_DIR$/wsgi/static/img/thumb-2.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/img/thumb-4.jpg" afterPath="$PROJECT_DIR$/wsgi/static/img/thumb-4.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/common.js" afterPath="$PROJECT_DIR$/wsgi/static/js/common.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/modernizr.js" afterPath="$PROJECT_DIR$/wsgi/static/js/modernizr.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/bootstrap/bootstrap-grid-3.3.1.min.css" afterPath="$PROJECT_DIR$/wsgi/static/libs/bootstrap/bootstrap-grid-3.3.1.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/countdown/jquery.countdown-ru.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/countdown/jquery.countdown-ru.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/countdown/jquery.countdown.css" afterPath="$PROJECT_DIR$/wsgi/static/libs/countdown/jquery.countdown.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/countdown/jquery.countdown.min.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/countdown/jquery.countdown.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/countdown/jquery.plugin.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/countdown/jquery.plugin.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/fancybox/blank.gif" afterPath="$PROJECT_DIR$/wsgi/static/libs/fancybox/blank.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/fancybox/fancybox_loading.gif" afterPath="$PROJECT_DIR$/wsgi/static/libs/fancybox/fancybox_loading.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/fancybox/fancybox_loading@2x.gif" afterPath="$PROJECT_DIR$/wsgi/static/libs/fancybox/fancybox_loading@2x.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/fancybox/fancybox_overlay.png" afterPath="$PROJECT_DIR$/wsgi/static/libs/fancybox/fancybox_overlay.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/fancybox/fancybox_sprite.png" afterPath="$PROJECT_DIR$/wsgi/static/libs/fancybox/fancybox_sprite.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/fancybox/fancybox_sprite@2x.png" afterPath="$PROJECT_DIR$/wsgi/static/libs/fancybox/fancybox_sprite@2x.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/fancybox/helpers/fancybox_buttons.png" afterPath="$PROJECT_DIR$/wsgi/static/libs/fancybox/helpers/fancybox_buttons.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/fancybox/helpers/jquery.fancybox-buttons.css" afterPath="$PROJECT_DIR$/wsgi/static/libs/fancybox/helpers/jquery.fancybox-buttons.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/fancybox/helpers/jquery.fancybox-buttons.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/fancybox/helpers/jquery.fancybox-buttons.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/fancybox/helpers/jquery.fancybox-media.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/fancybox/helpers/jquery.fancybox-media.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/fancybox/helpers/jquery.fancybox-thumbs.css" afterPath="$PROJECT_DIR$/wsgi/static/libs/fancybox/helpers/jquery.fancybox-thumbs.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/fancybox/helpers/jquery.fancybox-thumbs.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/fancybox/helpers/jquery.fancybox-thumbs.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/fancybox/jquery.fancybox.css" afterPath="$PROJECT_DIR$/wsgi/static/libs/fancybox/jquery.fancybox.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/fancybox/jquery.fancybox.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/fancybox/jquery.fancybox.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/fancybox/jquery.fancybox.pack.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/fancybox/jquery.fancybox.pack.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/font-awesome-4.2.0/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/wsgi/static/libs/font-awesome-4.2.0/css/font-awesome.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/font-awesome-4.2.0/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/wsgi/static/libs/font-awesome-4.2.0/fonts/FontAwesome.otf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/font-awesome-4.2.0/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/wsgi/static/libs/font-awesome-4.2.0/fonts/fontawesome-webfont.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/font-awesome-4.2.0/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/wsgi/static/libs/font-awesome-4.2.0/fonts/fontawesome-webfont.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/font-awesome-4.2.0/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/wsgi/static/libs/font-awesome-4.2.0/fonts/fontawesome-webfont.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/font-awesome-4.2.0/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/wsgi/static/libs/font-awesome-4.2.0/fonts/fontawesome-webfont.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/html5shiv/es5-shim.min.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/html5shiv/es5-shim.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/html5shiv/html5shiv-printshiv.min.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/html5shiv/html5shiv-printshiv.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/html5shiv/html5shiv.min.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/html5shiv/html5shiv.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/html5shiv/respond.min.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/html5shiv/respond.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/jquery/jquery-1.11.1.min.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/jquery/jquery-1.11.1.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/landing-nav/navigation.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/landing-nav/navigation.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/lightgallery/lg-autoplay.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/lg-autoplay.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/lightgallery/lg-fullscreen.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/lg-fullscreen.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/lightgallery/lg-fullscreen.min.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/lg-fullscreen.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/lightgallery/lg-hash.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/lg-hash.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/lightgallery/lg-pager.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/lg-pager.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/lightgallery/lg-thumbnail.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/lg-thumbnail.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/lightgallery/lg-thumbnail.min.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/lg-thumbnail.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/lightgallery/lg-video.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/lg-video.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/lightgallery/lg-zoom.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/lg-zoom.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/lightgallery/lightgallery.css" afterPath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/lightgallery.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/lightgallery/lightgallery.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/lightgallery.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/lightgallery/lightgallery.min.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/lightgallery.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/owl-carousel/AjaxLoader.gif" afterPath="$PROJECT_DIR$/wsgi/static/libs/owl-carousel/AjaxLoader.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/owl-carousel/grabbing.png" afterPath="$PROJECT_DIR$/wsgi/static/libs/owl-carousel/grabbing.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/owl-carousel/owl.carousel.css" afterPath="$PROJECT_DIR$/wsgi/static/libs/owl-carousel/owl.carousel.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/owl-carousel/owl.carousel.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/owl-carousel/owl.carousel.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/owl-carousel/owl.carousel.min.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/owl-carousel/owl.carousel.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/owl-carousel/owl.theme.css" afterPath="$PROJECT_DIR$/wsgi/static/libs/owl-carousel/owl.theme.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/owl-carousel/owl.transitions.css" afterPath="$PROJECT_DIR$/wsgi/static/libs/owl-carousel/owl.transitions.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/respond/respond.min.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/respond/respond.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/scrollto/jquery.scrollTo.min.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/scrollto/jquery.scrollTo.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/libs/waypoints/waypoints-1.6.2.min.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/waypoints/waypoints-1.6.2.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/new.iml" afterPath="$PROJECT_DIR$/.idea/new.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/webResources.xml" afterPath="$PROJECT_DIR$/.idea/webResources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="new.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -87,10 +215,50 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.4466292">
+            <state vertical-scroll-proportion="-5.625">
+              <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contact.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/contact.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wsgi/static/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fonts.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wsgi/static/css/fonts.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="merriweather.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wsgi/static/fonts/merriweather/merriweather.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -194,20 +362,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="new" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="new" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -248,6 +402,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/wsgi/static" />
       <recent name="$PROJECT_DIR$/app/templates" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -509,15 +664,15 @@
     <frame x="0" y="23" width="1366" height="700" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25377643" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25377643" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32930514" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3305921" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3305921" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -658,7 +813,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/common.js">
+    <entry file="file://$PROJECT_DIR$/wsgi/static/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -726,7 +881,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.4466292">
+        <state vertical-scroll-proportion="-5.625">
+          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/contact.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wsgi/static/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wsgi/static/css/fonts.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wsgi/static/fonts/merriweather/merriweather.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>

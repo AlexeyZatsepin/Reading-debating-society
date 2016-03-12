@@ -5,9 +5,9 @@
       <entry url="file://$PROJECT_DIR$">
         <entryData>
           <resourceRoots>
-            <path value="file://$PROJECT_DIR$/static/libs" />
-            <path value="file://$PROJECT_DIR$/static/img" />
-            <path value="file://$PROJECT_DIR$/static/fonts" />
+            <path value="file://$PROJECT_DIR$/wsgi/static/libs" />
+            <path value="file://$PROJECT_DIR$/wsgi/static/img" />
+            <path value="file://$PROJECT_DIR$/wsgi/static/fonts" />
           </resourceRoots>
         </entryData>
       </entry>
