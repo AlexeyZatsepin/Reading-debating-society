@@ -1186,7 +1186,7 @@
     Plugin.prototype.closeGallery = function() {
 
         var _this = this;
-        var mousedown = false;
+        var mousedown = true;
         this.$outer.find('.lg-close').on('click.lg', function() {
             _this.destroy();
         });
