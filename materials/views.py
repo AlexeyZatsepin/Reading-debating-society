@@ -15,7 +15,12 @@ def material(request, id):
 
 
 def events(request):
-    args = {'previous': Event.objects.filter(), 'upcoming': Event.objects.filter()}
+    from django.utils.datetime_safe import date
+    from django.db.models import Min,Max
+    today = date.today()
+    start_day = Event.objects.all().aggregate(Min('when')).values()
+    end_day = Event.objects.all().aggregate(Max('when')).values()
+    args = {'previous': Event.objects.filter(when__range=[start_day[0],today]), 'upcoming': Event.objects.filter(when__range=[today,end_day[0]])}
     return render_to_response('events.html', args)
 
 

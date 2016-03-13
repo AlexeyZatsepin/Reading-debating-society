@@ -34,7 +34,7 @@ class VisitManager(admin.ModelAdmin):
         args = {'values': values,'opts': Visits._meta, 'app_label': Visits._meta.app_label, 'site_header': 'Welcome page visits statistic', 'site_title': "Statistic"}
         from django.shortcuts import render_to_response
         from django.template import RequestContext
-        return render_to_response('admin/app/visits/change_list.html',args, context_instance=RequestContext(request))
+        return render_to_response('admin/app/visits/change_list.html', args, context_instance=RequestContext(request))
 
 
 admin.site.index_title = 'Administrating'

@@ -1,17 +1,19 @@
 from django.shortcuts import render, render_to_response
 from django.views.decorators.csrf import csrf_protect
 from django.http import HttpResponseRedirect, BadHeaderError
+from .models import Committee_stuff,Committee
 
 
 def committee(request):
     args = {}
+    args['stuff'] = Committee_stuff.objects.all()
     return render_to_response('committe.html', args)
 
 
 @csrf_protect
 def registration(request):
-    from forms import Registration
-    from models import Alumni
+    from .forms import Registration
+    from .models import Alumni
     from django.core.mail import send_mail
     form = Registration(request.POST or None)
     args = {'form': form}
