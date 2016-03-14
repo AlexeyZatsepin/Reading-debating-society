@@ -10,7 +10,7 @@ class Committee(models.Model):
         return self.time
 
     time = models.TextField('years',help_text="format: 2012-2013")
-    image = models.ImageField(upload_to='images')
+    image = models.ImageField(upload_to='images',blank=True)
 
     def get_absolute_url(self):
         return "/committee/%i/" % self.time

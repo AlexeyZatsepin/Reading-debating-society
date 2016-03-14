@@ -1,6 +1,6 @@
 from django.shortcuts import render, render_to_response, redirect
 from django.views.decorators.csrf import csrf_protect
-from django.http import HttpResponseRedirect, BadHeaderError
+from django.http import BadHeaderError
 from django.views.decorators.debug import sensitive_variables
 
 from .models import Committee, Committee_stuff, Alumni
@@ -28,6 +28,7 @@ def database(request):
 @csrf_protect
 def registration(request):
     if 'has_registrated' in request.session:
+        del request.session['thanks']
         return redirect(database)
     from .forms import Registration
     from .models import Alumni
@@ -51,11 +52,11 @@ def registration(request):
         recipients.append(alunmi.email)
         try:
             send_mail(subject, message, 'alexzatsepin7@gmail.com', recipients, fail_silently=False)
-        except BadHeaderError:
+        except :
             args['thanks'] = 'Try again, server overload'
             return render(request, 'register.html', args)
         request.session['thanks'] = subject + str(alunmi.first_name) + str(' ') + str(alunmi.last_name)
         request.session['has_registrated'] = True
-        request.session.set_expiry(120)
+        request.session.set_expiry(300)
         return redirect(database)
     return render(request, 'register.html', args)
