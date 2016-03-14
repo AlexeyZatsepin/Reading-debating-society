@@ -15,7 +15,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
@@ -29,8 +28,6 @@ ALLOWED_HOSTS = []
 ON_OPENSHIFT = False
 if 'OPENSHIFT_REPO_DIR' in os.environ:
     ON_OPENSHIFT = True
-
-
 
 # Application definition
 
@@ -63,7 +60,6 @@ MIDDLEWARE_CLASSES = [
 
 ROOT_URLCONF = 'config.urls'
 
-
 TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'templates'),)
 TEMPLATES = [
     {
@@ -83,7 +79,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 if ON_OPENSHIFT:
@@ -98,21 +93,18 @@ if ON_OPENSHIFT:
             'PASSWORD': os.getenv('OPENSHIFT_MYSQL_DB_PASSWORD'),
             'HOST': os.getenv('OPENSHIFT_MYSQL_DB_HOST'),
             'PORT': os.getenv('OPENSHIFT_MYSQL_DB_PORT'),
-            }
+        }
     }
 else:
     DEBUG = True
     TEMPLATE_DEBUG = True
     ALLOWED_HOSTS = []
     DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
-
-
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
@@ -131,7 +123,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
@@ -156,3 +147,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'wsgi', 'static', 'media')
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+# Cache settings
+if ON_OPENSHIFT:
+    CACHES = {
+        'default': {
+            'BACKEND': 'django.core.cache.backends.memcached.PyLibMCCache',
+            'LOCATION': '/tmp/memcached.sock',
+        }
+    }
