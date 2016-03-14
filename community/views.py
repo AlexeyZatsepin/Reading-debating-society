@@ -25,6 +25,8 @@ def database(request, ):
 @sensitive_variables('alumni')
 @csrf_protect
 def registration(request):
+    if request.session['has_registrated']:
+        return redirect(database)
     from .forms import Registration
     from .models import Alumni
     from django.core.mail import send_mail
@@ -51,5 +53,7 @@ def registration(request):
             args['thanks'] = 'Try again, server overload'
             return render(request, 'register.html', args)
         request.session['thanks'] = subject + str(alunmi.first_name) + str(' ') + str(alunmi.last_name)
+        request.session['has_registrated']=True
+        request.session.set_expiry(120)
         return redirect(database)
     return render(request, 'register.html', args)
