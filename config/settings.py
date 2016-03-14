@@ -148,11 +148,3 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-# Cache settings
-if ON_OPENSHIFT:
-    CACHES = {
-        'default': {
-            'BACKEND': 'django.core.cache.backends.memcached.PyLibMCCache',
-            'LOCATION': '/tmp/memcached.sock',
-        }
-    }
