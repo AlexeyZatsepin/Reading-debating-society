@@ -16,9 +16,11 @@ def committee(request, time=''):
     return render_to_response('committe.html', args)
 
 
-def database(request, ):
-    thanks = request.session['thanks']
-    args = {'thanks': thanks if thanks else None, 'db': Alumni.objects.all()}
+def database(request):
+    args = {}
+    if 'thanks' in request.session:
+        args = {'thanks': request.session['thanks']}
+    args['db'] = Alumni.objects.all()
     return render_to_response('database.html', args)
 
 
@@ -53,7 +55,7 @@ def registration(request):
             args['thanks'] = 'Try again, server overload'
             return render(request, 'register.html', args)
         request.session['thanks'] = subject + str(alunmi.first_name) + str(' ') + str(alunmi.last_name)
-        request.session['has_registrated']=True
+        request.session['has_registrated'] = True
         request.session.set_expiry(120)
         return redirect(database)
     return render(request, 'register.html', args)
