@@ -1,11 +1,13 @@
 from django.shortcuts import render, render_to_response, redirect
 from django.views.decorators.csrf import csrf_protect
 from django.http import HttpResponseRedirect, BadHeaderError
-from .models import Committee,Committee_stuff,Alumni
+from django.views.decorators.debug import sensitive_variables
+
+from .models import Committee, Committee_stuff, Alumni
 
 
-def committee(request,time=''):
-    years_list = sorted(list(set(Committee.objects.values_list('time',flat=True))))
+def committee(request, time=''):
+    years_list = sorted(list(set(Committee.objects.values_list('time', flat=True))))
     if time == '':
         args = {'stuff': Committee_stuff.objects.all()}
     else:
@@ -14,11 +16,13 @@ def committee(request,time=''):
     return render_to_response('committe.html', args)
 
 
-def database(request,thanks=''):
-    args= {'thanks': thanks if thanks != '' else None, 'db': Alumni.objects.all()}
-    return render_to_response('database.html',args)
+def database(request, ):
+    thanks = request.session['thanks']
+    args = {'thanks': thanks if thanks else None, 'db': Alumni.objects.all()}
+    return render_to_response('database.html', args)
 
 
+@sensitive_variables('alumni')
 @csrf_protect
 def registration(request):
     from .forms import Registration
@@ -37,14 +41,15 @@ def registration(request):
         alunmi.courses = form.cleaned_data.get('courses', None)
         alunmi.current_occupation = form.cleaned_data.get('current_occupation', None)
         alunmi.save()
-        subject = "Thanks for registration"
+        subject = "Thanks for registration "
         message = "You are very important for our alumni community!"
         recipients = list()
         recipients.append(alunmi.email)
         try:
             send_mail(subject, message, 'alexzatsepin7@gmail.com', recipients, fail_silently=False)
         except BadHeaderError:
-            args['thanks']='Try again, server overload'
+            args['thanks'] = 'Try again, server overload'
             return render(request, 'register.html', args)
-        return redirect(database,thanks=subject+str(alunmi.first_name)+str(alunmi.last_name))
+        request.session['thanks'] = subject + str(alunmi.first_name) + str(' ') + str(alunmi.last_name)
+        return redirect(database)
     return render(request, 'register.html', args)

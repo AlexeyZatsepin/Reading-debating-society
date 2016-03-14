@@ -7,7 +7,9 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="committee_block">
-                    <p>{{ thanks }}</p>
+                    {% if thanks %}
+                    <p>{{ thanks}}</p>
+                    {% endif %}
                         <h2>Alumni Database</h2>
 
                         {% for member in db %}
