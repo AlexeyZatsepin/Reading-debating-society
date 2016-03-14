@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block main %}
+    <main>
+        <section class="site_main">
+		  <div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="committee_block">
+                        <h2>Alumni Database</h2>
+
+                        {% for member in db %}
+                        <div class="item_item bgr clearfix">
+                            <div class="item_media">
+                                {% if member.photo %}
+                                    <img src="{{ member }}" alt="{{ member.last_name }}" ></div>
+                                {% else %}
+                                    <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSEU3t3GI2E9ewv00BuKS_81R3BiUr1SEH1gSKBe9eDKcpiG7yQbg" alt="{{ member.last_name }}" ></div>
+                                    {# <i class="fa fa-user fa-5x"></i>#}
+                                {% endif %}
+                            <div class="item_main">
+                               <h2>{{ member }}</h2>
+                               <div class="item_info">
+                                    <p>Alesso is a third year Economics student who knows how to make the Warwick IV the envy of the debating world. In charge of organising internal and external competitions, he is keen to make both the IV.</p>
+                                    <span class="p_bold">Years at society:</span> {{ member.time_in_society }}<br>
+                                    <span class="p_bold">Course studied at Reading:</span> {{ member.courses }}<br>
+                                    <span class="p_bold">Current Company:</span>{{ member.current_occupation }}<br>
+                               </div>
+                            </div>
+                        </div>
+                        {% empty %}
+                            <p>Please check db, it is empty</p>
+                        {% endfor %}
+                    </div>
+                </div>
+              </div>
+            </div>
+	</section>
+    </main>
+{% endblock %}

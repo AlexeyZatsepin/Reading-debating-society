@@ -40,6 +40,5 @@ class Registration(Form):
         message='Must be in this type 2xxx-2xxx',
         code='invalid_duration'
     ), ], required=False)
-    courses = CharField(max_length=50, required=False)
-    current_occupation = CharField(max_length=20, required=False)
-    current_company = CharField(max_length=20, required=False)
+    courses = CharField(max_length=100, required=False)
+    current_occupation = CharField(max_length=60, required=False)

@@ -80,7 +80,7 @@
                               <span class="highlight"></span>
                               <span class="bar"></span>
                                 <span class="error">{{ form.current_occupation.errors }}</span>
-                              <label>Current occupation (pounds)</label>
+                              <label>Current occupation (Company)</label>
                             </div>
 
                             <div class="input_group">
@@ -89,14 +89,6 @@
                               <span class="bar"></span>
                                 <span class="error">{{ form.courses.errors }}</span>
                               <label>Course stydied at Reading</label>
-                            </div>
-
-                            <div class="input_group">
-                              {{ form.current_company }}
-                              <span class="highlight"></span>
-                              <span class="bar"></span>
-                                <span class="error">{{ form.current_company.errors }}</span>
-                              <label>Current company</label>
                             </div>
 
                             <input class="button button_checkdb" type="submit" value="Register as alumni">
@@ -113,7 +105,7 @@
 									<p>Now we have the page where you will be able to see <span class="p_bold">information on any graduate</span> !</p>
 
 									<p>You can search an alumni by <span class="p_bold">Year, Current occupation, Current company</span> and much more!</p>
-                                 <a href="#" class="button button_checkdb">Check all alumni database</a>
+                                 <a href="{% url 'database' %}" class="button button_checkdb">Check all alumni database</a>
 					</aside>
 				</div>
 			</div>
