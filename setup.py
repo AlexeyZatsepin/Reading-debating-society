@@ -1,10 +1,10 @@
 from setuptools import setup
 
-setup(name='YourAppName',
+setup(name='ReadingDebatingSociety',
       version='1.0',
-      description='OpenShift App',
-      author='Your Name',
-      author_email='example@example.com',
+      description='OpenShift Django+Python+MySQL app',
+      author='Alex Zatsepin',
+      author_email='alexzatsepin7@gmail.com',
       url='http://www.python.org/sigs/distutils-sig/',
-      install_requires=['Django>=1.3'],
+      install_requires=['Django>=1.7'],
      )

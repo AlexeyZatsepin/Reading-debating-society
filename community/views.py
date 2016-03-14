@@ -1,4 +1,4 @@
-from django.shortcuts import render, render_to_response
+from django.shortcuts import render, render_to_response, redirect
 from django.views.decorators.csrf import csrf_protect
 from django.http import HttpResponseRedirect, BadHeaderError
 from .models import Committee,Committee_stuff,Alumni
@@ -14,16 +14,15 @@ def committee(request,time=''):
     return render_to_response('committe.html', args)
 
 
-def database(request):
-    args={}
-    args['db'] = Alumni.objects.all()
+def database(request,thanks=''):
+    args= {'thanks': thanks if thanks != '' else None, 'db': Alumni.objects.all()}
     return render_to_response('database.html',args)
 
 
 @csrf_protect
 def registration(request):
-    from forms import Registration
-    from models import Alumni
+    from .forms import Registration
+    from .models import Alumni
     from django.core.mail import send_mail
     form = Registration(request.POST or None)
     args = {'form': form}
@@ -47,5 +46,5 @@ def registration(request):
         except BadHeaderError:
             args['thanks']='Try again, server overload'
             return render(request, 'register.html', args)
-        args['thanks']=subject+str(alunmi.first_name)+str(alunmi.last_name)
+        return redirect(database,thanks=subject+str(alunmi.first_name)+str(alunmi.last_name))
     return render(request, 'register.html', args)

@@ -4,8 +4,7 @@ from materials.models import Material,Event
 
 
 def materials(request):
-    args = {'workshops': Material.objects.filter(type='workshop'),
-            'articles': Material.objects.filter(type='helpful article')}
+    args = {}
     return render_to_response('materials.html', args)
 
 
