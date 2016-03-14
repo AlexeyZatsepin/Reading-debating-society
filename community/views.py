@@ -25,7 +25,7 @@ def database(request, ):
 @sensitive_variables('alumni')
 @csrf_protect
 def registration(request):
-    if request.session['has_registrated']:
+    if request.session['has_registrated'] is not None:
         return redirect(database)
     from .forms import Registration
     from .models import Alumni
