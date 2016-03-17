@@ -1,5 +1,5 @@
-from django.shortcuts import render_to_response, get_object_or_404
-from models import Album,Photo
+from django.shortcuts import render_to_response, get_object_or_404, get_list_or_404
+from .models import Album,Photo
 
 
 def gallery(request, year=''):
@@ -13,5 +13,5 @@ def gallery(request, year=''):
 
 
 def album(request, id):
-    args={'photos':get_object_or_404(Photo,album_id=id)}
+    args={'photos':get_list_or_404(Photo,album_id=id)}
     return render_to_response('album.html',args)
