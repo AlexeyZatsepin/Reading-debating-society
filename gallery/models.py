@@ -48,9 +48,9 @@ class Photo(models.Model):
         return self.title
 
     album_id = models.ForeignKey(Album, on_delete=models.CASCADE, verbose_name="Album")
-    photo = models.ImageField(upload_to='images',verbose_name="photo title")
+    photo = models.ImageField(upload_to='images',verbose_name="photo title", help_text="Photos in one album must have equal size!")
     title = models.TextField()
-    discription = models.TextField()
+    discription = models.TextField(blank=True)
 
     def get_image(self):
         if self.photo:
