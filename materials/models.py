@@ -14,15 +14,15 @@ class Material(models.Model):
     #    (1, "workshop"),
     #    (2, "helpful article"),
     #)
-    title = models.CharField(max_length=60)
+    title = models.CharField(max_length=100)
     #image = models.ImageField(upload_to='images')
     short_discription = models.TextField(blank=True)
     full_discription = models.TextField(blank=True)
     #type = models.CharField(choices=type_choises, max_length=10)
-    attach = models.FileField(upload_to='materials')
+    attach = models.FileField(upload_to='files')
 
-    def get_absolute_url(self):
-        return "/material/%i/" % self.id
+    def get_download_url(self):
+        return "/materials/download/%s" % self.attach
 
 
 class Event(models.Model):

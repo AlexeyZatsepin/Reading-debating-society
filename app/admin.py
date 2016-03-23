@@ -27,8 +27,8 @@ class VisitManager(admin.ModelAdmin):
         from django.utils import timezone
         today = timezone.now()
         start_day = Visits.objects.all().aggregate(Min('datetime')).values()
-        print(start_day[0])
-        print(today)
+        #print(start_day[0])
+        #print(today)
         qsstats = QuerySetStats(Visits.objects.all(), date_field='datetime', aggregate=Count('id'))
         values = qsstats.time_series(start_day[0], today, interval='days')
         args = {'values': values,'opts': Visits._meta, 'app_label': Visits._meta.app_label, 'site_header': 'Welcome page visits statistic', 'site_title': "Statistic"}

@@ -7,32 +7,70 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="committee_block">
-                    {% if thanks %}
-                    <p>{{ thanks}}</p>
-                    {% endif %}
-                        <h2>Alumni Database</h2>
+                    <h2><i class="fa fa-database"></i>Alumni Database</h2>
+
+                         <ul class="filter">
+                                <li><a href="#">Years <i class="fa fa-sort-desc"></i></a>
+                                    <ul class="sub-filter">
+                                        {% for year in years %}
+                                            {% if year == '' %}
+                                            {% else %}
+                                        <li><a href="/community/db/{{ year }}/">{{ year }}</a></li>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">Course <i class="fa fa-sort-desc"></i></a>
+                                    <ul class="sub-filter">
+                                        {% for course in courses %}
+                                            {% if course == '' %}
+                                                {% else %}
+                                        <li><a href="/community/db/{{ course }}/">{{ course }}</a></li>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </ul>
+                                </li>
+                                <li><a href="#">Company <i class="fa fa-sort-desc"></i></a>
+                                    <ul class="sub-filter">
+                                        {% for company in companies %}
+                                            {% if company == '' %}
+                                                {% else %}
+                                        <li><a href="/community/database/{{ company }}/">{{ company }}</a></li>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </ul>
+                                </li>
+                         </ul>
+                        {% if thanks %}
+                            <div class="info_window">
+                            <i class="fa fa-info-circle"></i>{{ thanks }}
+                            </div>
+                        {% endif %}
 
                         {% for member in db %}
                         <div class="item_item bgr clearfix">
+
                             <div class="item_media">
                                 {% if member.photo %}
-                                    <img src="{{ member }}" alt="{{ member.last_name }}" ></div>
+                                    <img src="{{ member }}" alt="{{ member.last_name }}" >
                                 {% else %}
-                                    <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSEU3t3GI2E9ewv00BuKS_81R3BiUr1SEH1gSKBe9eDKcpiG7yQbg" alt="{{ member.last_name }}" ></div>
-                                    {# <i class="fa fa-user fa-5x"></i>#}
-                                {% endif %}
+                                    <i class="fa fa-user"></i>
+                                {% endif %}</div>
                             <div class="item_main">
                                <h2>{{ member }}</h2>
                                <div class="item_info">
-                                    <p>Alesso is a third year Economics student who knows how to make the Warwick IV the envy of the debating world. In charge of organising internal and external competitions, he is keen to make both the IV.</p>
-                                    <span class="p_bold">Years at society:</span> {{ member.time_in_society }}<br>
-                                    <span class="p_bold">Course studied at Reading:</span> {{ member.courses }}<br>
-                                    <span class="p_bold">Current Company:</span>{{ member.current_occupation }}<br>
+                                    <i class="fa fa-calendar"></i><span class="p_bold">Years at society:</span> {{ member.time_in_society }}<br>
+                                    <i class="fa fa-university"></i><span class="p_bold">Course studied at Reading:</span> {{ member.courses }}<br>
+                                    <i class="fa fa-building"></i><span class="p_bold">Current Company:</span> {{ member.current_occupation }}<br>
                                </div>
                             </div>
-                        </div>
+                            </div>
                         {% empty %}
-                            <p>Please check db, it is empty</p>
+                            <div class="info_window">
+                            <i class="fa fa-info-circle"></i>
+                            Please check database at admin page it is empty!
+                            </div>
                         {% endfor %}
                     </div>
                 </div>

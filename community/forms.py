@@ -1,8 +1,8 @@
 # coding=utf-8
 from django.core.validators import RegexValidator
 
-from models import Alumni
-from django.forms import CharField, ModelForm, Form, URLField, EmailField
+from .models import Alumni
+from django.forms import CharField, ModelForm, Form, URLField, EmailField,ImageField
 from django.core import validators
 
 
@@ -42,3 +42,4 @@ class Registration(Form):
     ), ], required=False)
     courses = CharField(max_length=100, required=False)
     current_occupation = CharField(max_length=60, required=False)
+    image = ImageField(required=False)

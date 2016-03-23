@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block main %}
-<main>
+<main xmlns="http://www.w3.org/1999/html">
 
        <section class="site_main">
 		<div class="container">
@@ -24,6 +24,9 @@
                         <p>Database with relevant material for you to anhance your argument-building, public speaking and debating skills. How to make an effective speech, how to sound persuasive and convincing, more on British Parliamentary style and oxford style.</p>
 
                         <div class="effect-2">
+                            {% for material in materials %}
+                               <a href="{{ material.get_download_url }}" class="learn_link">{{ material.title }}</a>
+                            {% empty %}
                             <a href="#" class="learn_link">Training-1-Introduction-to-BP-debating</a>
                             <a href="#" class="learn_link">Training-2-Role-fulfillment </a>
                             <a href="#" class="learn_link">Advanced-Training-Bottom-Half</a>
@@ -34,6 +37,7 @@
                             <a href="#" class="learn_link">Advanced-Training-Bottom-Half</a>
                             <a href="#" class="learn_link">Economics-Training</a>
                             <a href="#" class="learn_link">Philosophy-in-debates</a>
+                            {% endfor %}
                         </div>
 					</div>
 

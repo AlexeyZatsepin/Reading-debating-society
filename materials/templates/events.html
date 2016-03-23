@@ -6,11 +6,12 @@
 
        <section class="site_main textcenter">
 		<div class="container">
+
             <div class="event_block">
                 <h2 class="events_h2">Upcoming events</h2>
 
     <div class="row">
-        <div id="effect">
+        <div class="effect">
     {% for event in upcoming %}
                 <div class="col-sm-6 col-md-4">
 					<div class="gallery_block clearfix">
@@ -46,12 +47,15 @@
         <p>No upcoming events</p>
      {% endfor %}
             </div>
+        </div>
+            </div>
 
 
             <div class="event_block debating_info">
                 <h2 class="events_h2">Previous events</h2>
-            <div class="row">
-            <div id="effect">
+
+    <div class="row">
+        <div class="effect">
     {% for event in previous %}
                 <div class="col-sm-6 col-md-4">
 					<div class="gallery_block clearfix">
@@ -75,6 +79,8 @@
 					</div>
 				</div>
 
+
+
              {% if forloop.counter|divisibleby:"3" %}
              </div>
                 </div>
@@ -84,10 +90,9 @@
      {% empty %}
         <p>No previous events</p>
      {% endfor %}
-
-
-
             </div>
+        </div></div>
+        </div>
 	</section>
 
     </main>

@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% block main %}
+{% load staticfiles %}
+<main>
+        {% if not albums and not events and not materials%}
+
+<section class="no_found">
+<div class="container">
+
+<div class="col-md-12">
+
+
+<div class="info_window">
+<i class="fa fa-info-circle"></i>Nothing found.
+</div>
+
+
+</div>
+</div>
+
+</section>
+
+
+        {% else %}
+        <section class="site_main textcenter">
+        {% if events %}
+		<div class="container">
+            <div class="event_block">
+                <h2 class="events_h2">Events</h2>
+
+    <div class="row">
+        <div class="effect">
+    {% for event in events %}
+                <div class="col-sm-6 col-md-4">
+					<div class="gallery_block clearfix">
+				        <figure>
+                           <img src="{{ event.image.url }}" alt="">
+                           <figcaption>
+                               <h3>{{ event.title }}</h3>
+                               <span>{{ event.short_discription }}</span>
+                               <a href="#" class="close-caption hidden">x</a>
+                           </figcaption>
+                        </figure>
+                        <div class="gallery_block_left">
+                            <i class="fa fa-university"></i>
+                            <span class="hint">Event</span>
+                            <span>{{ event.title }}</span>
+                        </div>
+                        <div class="gallery_block_right">
+                            <i class="fa fa-clock-o"></i>
+                            <span>{{ event.when }}</span>
+                        </div>
+					</div>
+				</div>
+
+
+
+             {% if forloop.counter|divisibleby:"3" %}
+             </div>
+                </div>
+                 <div class="row">
+                <div id="effect">
+             {% endif %}
+     {% endfor %}
+            </div>
+        </div></div>
+        </div>
+            <script src="{% static 'js/modernizr.js'%}"></script>
+        {% endif %}
+{% if albums %}
+            <div class="container">
+
+
+           <div class="event_block">
+                <h2 class="events_h2">Gallery</h2>
+			<div class="row">
+
+                <div class="col-md-12">
+                    {% for album in albums %}
+				<div class="col-sm-6 col-md-4">
+					<div class="gallery_block clearfix">
+				        <a href="{{ album.get_absolute_url }}">
+                            <img src="{{ album.cover.url }}" alt="{{ album.title }}" ></a>
+                        <div class="gallery_block_left">
+                            <i class="fa fa-camera"></i>
+                            <span class="hint">Album</span>
+                            <span>{{ album.title }}</span>
+                        </div>
+                        <div class="gallery_block_right">
+                            <i class="fa fa-clock-o"></i>
+                            <span>{{ album.year }}</span>
+                        </div>
+					</div>
+				</div>
+                    {% endfor %}
+
+
+                </div>
+               </div>
+             </div>
+		</div>
+    <br>
+        {% endif %}
+{% if materials %}
+            <div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="learn_block">
+
+                        <h2>Helpful articles, videos, presentations and links</h2>
+
+                         {% for material in materials %}
+                               <a href="{{ material.get_download_url }}" class="learn_link">{{ material.title }}</a>
+                        {% endfor %}
+                        </div>
+					</div>
+
+				</div>
+			</div>
+
+            {% endif %}
+	</section>
+{% endif %}
+    </main>
+{% endblock %}

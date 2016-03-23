@@ -1,25 +1,30 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block main %}
-      <main>
+    <main xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
         <section class="site_main">
 		  <div class="container">
 			<div class="row">
 				<div class="col-md-9">
 					<div class="committee_block">
+                    {% if "Current" in title %}
                         <h2>Current Committee</h2>
+                        {% else %}
+                        <h2>Commitee of {{ com.time }}</h2>
+                    {% endif %}
                         {% for member in stuff %}
                         <div class="item_item clearfix">
                             <div class="item_media">
-                                {% if member.image.url %}
+                                {% if member.image %}
                                     <img src="{{ member.image.url }}" alt="{{ member.name }}" >
                                 {% else %}
-                                    <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSEU3t3GI2E9ewv00BuKS_81R3BiUr1SEH1gSKBe9eDKcpiG7yQbg" alt="{{ member.last_name }}" ></div>
+                                    <div class="item_media"><i class="fa fa-user"></i></div>
                                 {% endif %}
                             </div>
 
                             <div class="item_main">
-                                <h1>{{ member.position }}</h1>
+                                <span class="position">
+                                    {{ member.position }}</span>
                                <h2>{{ member.name }}</h2>
                                <div class="item_info">
                                 <p>{{ member.discription }}
@@ -36,6 +41,9 @@
 
                 <div class="col-md-3">
 					<aside class="year_aside debating_info">
+                    {% if "Current" not in title %}
+                    <h2 class="p_bold"><a href="{% url 'committee' %}">Current Committee</a></h2>
+                    {% endif %}
                      <h2 class="p_bold">Previous Committees</h2>
                         {% for item in years %}
                         <a href="/community/{{ item }}" class="year_button hvr-sweep-to-bottom">{{ item }}</a>

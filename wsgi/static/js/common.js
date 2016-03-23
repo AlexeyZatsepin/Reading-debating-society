@@ -41,7 +41,7 @@ $(document).ready(function() {
 			$(".class").addClass("active");
 		} else if (direction === "up") {
 			$(".class").removeClass("deactive");
-		};
+		}
 	}, {offset: 100});
 
 	//Плавный скролл до блока .div по клику на .scroll
@@ -144,7 +144,7 @@ $(document).ready(function() {
             // add hover class if figure touchend and fingerMove is false
             el.addEventListener("touchend",function(e){
                 e.stopPropagation();
-                if (fingerMove == false) {
+                if (fingerMove === false) {
                     classie.add(el,"hover");
                 }
             });
@@ -153,7 +153,7 @@ $(document).ready(function() {
             closeCaption.addEventListener("touchend",function(e){
                 e.preventDefault();
                 e.stopPropagation();
-                if (fingerMove == false) {
+                if (fingerMove === false) {
                     if (classie.has(el,"hover")) {
                         classie.remove(el,"hover");
                     }
@@ -165,3 +165,15 @@ $(document).ready(function() {
     }
 
 })(window);
+
+$("[type=file]").on("change", function(){
+  
+  var file = this.files[0].name;
+  var plc = $(this).attr("placeholder");
+  if($(this).val()!==""){ 
+    $(this).next().text(file);
+  } else {
+    $(this).next().text(plc);
+  }
+});
+

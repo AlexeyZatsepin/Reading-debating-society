@@ -15,18 +15,16 @@
 
 									<h2>Our Alumni Association</h2>
 
-
+                                    {{ thanks }}
 									<p>This database will feature all Reading University Debate Society alumni and their current occupations. We are hoping to stay in touch with all our previous members. We are also hoping that common hobby can unite people and that the new members can use this search to contact alumni for professional networking purposes.  </p>
 
-                                    {% if form.errors %}
-                                        <p class="p_bold" style="color: red">Please check errors</p>
-                                    {% else %}
-                                        <p class="p_bold">Register, it will take you no more than a minute. </p>
-                                    {% endif %}
+
+                        <p class="p_bold"><i class="fa fa-sign-in"></i>Register, it will take you no more than a minute. </p>
+
 
                     <div class="form_block">
-                        <form method="post" action="{% url 'registr' %}">
-                            {% csrf_token %}
+                        <form method="post" action="{% url 'registr' %}" enctype="multipart/form-data">
+                            <div class="hidden_group">{% csrf_token %} </div>
                             <div class="input_group">
                               {{ form.first_name|attr:"autofocus"  }}
                               <span class="highlight"></span>
@@ -91,6 +89,11 @@
                               <label>Course stydied at Reading</label>
                             </div>
 
+
+                            <!--
+                            <input id="file_input" type="file" name="file"/>
+                            <label for="file_input">Add profile picture</label>
+                            -->
                             <input class="button button_checkdb" type="submit" value="Register as alumni">
 
                         </form>

@@ -11,7 +11,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="shortcut icon" href="{% static 'img/readinglogo.png'%}" />
-	<title>Debate Society</title>
+	<title>{{ title|default:'Debate Society' }}</title>
     <link rel="stylesheet" href="{% static 'libs/bootstrap/bootstrap-grid-3.3.1.min.css'%}" />
 	<link rel="stylesheet" href="{% static 'libs/font-awesome-4.2.0/css/font-awesome.min.css'%}" />
 	<link rel="stylesheet" href="{% static 'libs/fancybox/jquery.fancybox.css'%}" />
@@ -19,7 +19,14 @@
 	<link rel="stylesheet" href="{% static 'libs/countdown/jquery.countdown.css'%}" />
 	<link rel="stylesheet" href="{% static 'css/fonts.css'%}" />
 	<link rel="stylesheet" href="{% static 'css/main.css' %}" />
-    <link rel="stylesheet" href="{% static 'libs/lightgallery/css/lightgallery.css' %}">
+    {% if preload %}
+        <link rel="stylesheet" href="{% static 'libs/preloader/normalize.css'%}">
+	    <link rel="stylesheet" href="{% static 'libs/preloader/main.css'%}">
+	    <script src="{% static 'libs/preloader/modernizr-2.6.2.min.js'%}"></script>
+    {% endif %}
+    {% if gallery %}
+        <link rel="stylesheet" href="{% static 'libs/lightgallery/css/lightgallery.css' %}">
+    {% endif %}
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 </head>
 <body>
@@ -31,17 +38,14 @@
 			<div class="container">
 				<div class="col-md-12">
 					<div class="row">
-                        <div class="site_logo">
-							<a title="Home page" href="{% url 'welcome' %}"><img src="{% static 'img/logologo.png'%}" height="76" width="95" alt="Logo" ></a>
-						</div>
-						<div class="soc_buttons">
-							<a class="soc_buttons_fb" href="https://www.facebook.com/groups/readingdebate/">
+
+                        <a class="soc_buttons_fb" href="https://www.facebook.com/groups/readingdebate/">
                                 <i class="fa fa-facebook-square"></i>
                             </a>
 							<a class="soc_buttons_rusu" href="http://www.rusu.co.uk/societies/debate/">
-                                <img src="{% static 'img/Rusu-white.png'%}" width="100" height="12" alt="RUSU" >
+                                <img src="{% static 'img/Rusu-white.png'%}" width="130" height="17" alt="RUSU" >
                             </a>
-						</div>
+
 					</div>
 				</div>
 			</div>
@@ -51,9 +55,13 @@
 		   <div class="container">
 			   <div class="col-md-12">
                    <div class="row">
-                     <p class="logo">
-                         <a title="Home page" href="{% url 'welcome' %}"><span>Reading</span> Debate Society</a>
-                     </p>
+
+                    <div class="logo">
+                         <a title="Home page" href="{% url 'welcome' %}"><img src="{% static 'img/logologo.png' %}" height="88" width="110" alt="Logo" ></a>
+                         <div class="page_title">
+                             <span>Reading</span> Debate Society
+                         </div>
+                     </div>
 
 				   </div>
                </div>
@@ -63,19 +71,29 @@
 
 	 <nav class="clearfix">
 		<ul>
-          <a href="{% url 'registr' %}" class="active"><li>Register as Alumni</li></a>
-		  <a href="{% url 'debating' %}"><li>Debating</li></a>
-		  <a href="{% url 'materials' %}"><li>Learning materials</li></a>
-		  <a href="{% url 'events' %}"><li>Events</li></a>
-          <a href="{% url 'committee' %}"><li>Committee</li></a>
-          <a href="{% url 'sponsors' %}"><li>Sponsors</li></a>
-          <a href="{% url 'gallery' %}"><li>Gallery</li></a>
-          <a href="{% url 'contact' %}"><li>Contact us</li></a>
-          <input type="search" placeholder="Search" >
+
+          <li><a href="{% url 'registr' %}" {% if regas %} class="active" {% endif %}>Register as alumni</a></li>
+          <li><a href="{% url 'debating' %}"{% if debating %} class="active" {% endif %}>Debating</a></li>
+		  <li><a href="{% url 'materials' %}" {% if lm %} class="active" {% endif %}>Learning materials</a></li>
+          <li><a href="{% url 'events' %}" {% if e %} class="active" {% endif %}>Events</a></li>
+          <li><a href="{% url 'committee' %}" {% if committee %} class="active" {% endif %}>Committee</a></li>
+          <li><a href="{% url 'sponsors' %}" {% if sponsors_page %}class="active"{% endif %}>Sponsors</a></li>
+          <li><a href="{% url 'gallery' %}" {% if gallery %} class="active" {% endif %}>Gallery</a></li>
+          <li><a href="{% url 'contact' %}" {% if contact %} class="active" {% endif %}>Contact us</a></li>
+          <li><form method="GET" action="{% url 'search' %}">
+          	{% csrf_token %}
+          	{{ search }}
+          </form></li>
+
 		</ul>
 
 		<div class="handle"><i class="fa fa-bars"></i></div>
-        <div class="handle_search"><input type="search" placeholder="Search" ></div>
+        <div class="handle_search">
+            <form method="GET" action="{% url 'search' %}">
+            {% csrf_token %}
+                {{ search }}
+            </form>
+        </div>
 
 	 </nav>
 
@@ -94,7 +112,7 @@
 							<a class="footer_link" href="https://www.facebook.com/groups/readingdebate/">
                                 <i class="fa fa-facebook"></i>
                             </a>
-							<a class="footer_link phone" href="#">
+							<a class="footer_link phone" href="{% url 'contact' %}">
                                 <i class="fa fa-phone"></i>
                             </a>
 						</div>
@@ -133,20 +151,27 @@
 	<script src="{% static 'libs/countdown/jquery.countdown.min.js'%}"></script>
 	<script src="{% static 'libs/countdown/jquery.countdown-ru.js'%}"></script>
 	<script src="{% static 'libs/landing-nav/navigation.js'%}"></script>
+    {% if gallery %}
     <script src="{% static 'libs/lightgallery/js/lightgallery.min.js'%}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
-    <script src="{% static 'libs/lightgallery/js/lg-thumbnail.min.js'%}"></script>
-    <script src="{% static 'libs/lightgallery/js/lg-fullscreen.min.js'%}"></script>
-	<script src="{% static 'js/common.js'%}"></script>
     <script type="text/javascript">
     $(document).ready(function() {
         $("#lightgallery").lightGallery();
     });
     </script>
+    {% endif %}
+    {% if preload %}
+        <script src="{% static 'libs/preloader/loaders.css.js'%}"></script>
+        <script src="{% static 'libs/preloader/main.js'%}"></script>
+    {% endif %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script src="{% static 'libs/lightgallery/js/lg-thumbnail.min.js'%}"></script>
+    <script src="{% static 'libs/lightgallery/js/lg-fullscreen.min.js'%}"></script>
+	<script src="{% static 'js/common.js'%}"></script>
 	<script>
 		$('.handle').on('click', function(){
 		$('nav ul').toggleClass('showing');
 		});
 	</script>
+
 </body>
 </html>

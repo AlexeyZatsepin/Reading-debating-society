@@ -2,6 +2,7 @@ from __future__ import unicode_literals
 
 from django.db import models
 
+
 class Committee(models.Model):
     class Meta():
         db_table = "Committee"
@@ -25,10 +26,10 @@ class Committee_stuff(models.Model):
     def __str__(self):
         return self.name
 
-    name = models.CharField(max_length=20)
-    position = models.CharField(max_length=20)
-    discription = models.TextField()
-    image = models.ImageField(upload_to='images')
+    name = models.CharField(max_length=50)
+    position = models.CharField(max_length=50)
+    discription = models.TextField(blank=True)
+    image = models.ImageField(upload_to='images',blank=True)
     committee = models.ForeignKey(Committee)
 
 
@@ -43,8 +44,9 @@ class Alumni(models.Model):
     first_name = models.CharField(max_length=20)
     last_name = models.CharField(max_length=20)
     email = models.EmailField()
-    facebook = models.URLField()
-    linkedin = models.URLField()
+    facebook = models.URLField(blank=True)
+    linkedin = models.URLField(blank=True)
     time_in_society = models.CharField(max_length=20)
     courses = models.CharField(max_length=200)
-    current_occupation = models.CharField(max_length=200)
+    current_occupation = models.CharField(max_length=200,blank=True)
+    image = models.ImageField(upload_to='images', blank=True)

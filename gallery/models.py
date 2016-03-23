@@ -28,7 +28,7 @@ class Album(models.Model):
 
     cover = models.ImageField(upload_to='images')
     year = models.CharField(max_length=10, choices=year_choises, default=2016)
-    title = models.CharField(max_length=20, verbose_name= "album title")
+    title = models.CharField(max_length=60, verbose_name= "album title")
 
     def get_image(self):
         if self.cover:

@@ -60,7 +60,6 @@ MIDDLEWARE_CLASSES = [
 
 ROOT_URLCONF = 'config.urls'
 
-TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'templates'),)
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -73,6 +72,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'debug': False,
         },
     },
 ]
@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 if ON_OPENSHIFT:
     DEBUG = True
-    TEMPLATE_DEBUG = False
+    #TEMPLATE_DEBUG = False
     ALLOWED_HOSTS = ['*']
     DATABASES = {
         'default': {
@@ -95,6 +95,7 @@ if ON_OPENSHIFT:
             'PORT': os.getenv('OPENSHIFT_MYSQL_DB_PORT'),
         }
     }
+
 else:
     DEBUG = True
     TEMPLATE_DEBUG = True
@@ -139,13 +140,38 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
+if ON_OPENSHIFT:
+    STATIC_URL = '/static/'
+    MEDIA_URL = '/static/media/'
+    STATIC_ROOT = os.path.join(BASE_DIR, 'wsgi', 'static')
+    # MEDIA_ROOT = os.path.join(BASE_DIR, 'wsgi', 'static', 'media')
+    STATICFILES_DIRS = (
+        os.path.join(BASE_DIR, 'static'),
+    )
+    MEDIA_ROOT = str(os.environ.get('OPENSHIFT_REPO_DIR')) + '/wsgi/static/media'
+    # MEDIA_ROOT = os.environ.get('OPENSHIFT_DATA_DIR', '')
+else:
+    STATIC_URL = '/static/'
+    STATICFILES_DIRS = (
+        os.path.join(BASE_DIR, 'wsgi/static'),
+    )
+    MEDIA_URL = '/media/'
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'wsgi/static/media')
 
-STATIC_URL = '/static/'
-MEDIA_URL = '/static/media/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'wsgi', 'static')
-#MEDIA_ROOT = os.path.join(BASE_DIR, 'wsgi', 'static', 'media')
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
-MEDIA_ROOT = os.environ.get('OPENSHIFT_REPO_DIR')+'/wsgi/static/media'
-#MEDIA_ROOT = os.environ.get('OPENSHIFT_DATA_DIR', '')
+'''
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': 'wsgi/files/tmp/cache'
+    }
+}
+'''
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'alexzatsepin7@gmail.com'
+DEFAULT_FROM_EMAIL = 'alexzatsepin7@gmail.com'
+SERVER_EMAIL = 'alexzatsepin7@gmail.com'
+EMAIL_HOST_PASSWORD = 'apollo7nipestazXela'
+EMAIL_PORT = 587

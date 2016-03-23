@@ -4,7 +4,7 @@
  <main>
        {% if slider %}
        <section class="slider">
-
+                    <h1>Section identifying heading</h1>
                             <div class="prev_button"><i class="fa fa-angle-left"></i></div>
                                <div class="next_button"><i class="fa fa-angle-right"></i></div>
            
@@ -18,6 +18,7 @@
        </section>
        {% endif %}
        <section class="site_main">
+           <h2>Section identifying heading</h2>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8">
@@ -25,8 +26,6 @@
 							
 								
 									<h2>Welcome!</h2>
-								
-								
 									<img src="{% static  'img/graduate-icon.png' %}" alt="alt" width="140" height="90">
 								
 								    {{ flatblock.content|safe }}
@@ -56,7 +55,7 @@
                         </div>
 				  
 					<div class="sell_right">
-						<a href="http://www.rusu.co.uk/societies/debate/" class="button">Join the society now</a>
+						<a href="http://www.rusu.co.uk/societies/debate/" class="button hvr-wobble-horizontal">Join the society now</a>
 					</div>
                     </div>
 							

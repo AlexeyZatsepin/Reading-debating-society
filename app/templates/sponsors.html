@@ -4,14 +4,15 @@
      <main>
 
        <section class="site_main">
+       <h1>Section identifying heading</h1>
 		<div class="container">
 
                     {% for sponsor in sponsors %}
                         {% if forloop.counter|divisibleby:"3" %}
                         <div class="row">
                         {% endif %}
-                    <div class="col-md-4">
-					<div class="welcome sponsors_block">
+                    <div class="col-sm-4">
+					<div class="welcome sponsors_block {% if forloop.last %} debating_info{% endif %}">
 				        <a href="{{ sponsors.get_link }}"><img src="{{ sponsor.image.url }}" alt="sponsor_logo"></a>
                         <p><span>{{ sponsor.name }}</span>
                         {{ sponsor.description }}
@@ -21,11 +22,13 @@
                         </div>
                         {% endif %}
                     {% empty %}
-                        <p>No sponsors</p>
+                        <div class="info_window">
+                            <i class="fa fa-info-circle"></i>
+                            Please add sponsors at admin page
+                            </div>
                     {% endfor %}
 		</div>
 	</section>
-     <br>
 
     </main>
 {% endblock %}

@@ -1,17 +1,24 @@
 from django.shortcuts import render_to_response, get_object_or_404, get_list_or_404
-from .models import Album,Photo
+from django.views.decorators.cache import cache_page
+
+from app.forms import SearchForm
+from .models import Album, Photo
 
 
+@cache_page(60 * 10)
 def gallery(request, year=''):
-    years_list = sorted(list(set(Album.objects.values_list('year',flat=True))))
+    years_list = sorted(list(set(Album.objects.values_list('year', flat=True))))
     if year == '':
         args = {'albums': Album.objects.all()}
     else:
         args = {'albums': Album.objects.filter(year=year)}
-    args.update({'years': years_list})
+    args.update({'years': years_list, 'search': SearchForm(), 'gallery': True, 'title': "Photo gallery"})
     return render_to_response('gallery.html', args)
 
 
+@cache_page(60 * 10)
 def album(request, id):
-    args={'photos':get_list_or_404(Photo,album_id=id)}
-    return render_to_response('album.html',args)
+    title = "Album %s" % Album.objects.get(id=id).title
+    args = {'photos': get_list_or_404(Photo, album_id=id, ), 'gallery': True, 'title': title, 'search': SearchForm(),
+            'preload': True}
+    return render_to_response('album.html', args)

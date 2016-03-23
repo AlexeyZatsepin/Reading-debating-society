@@ -1,19 +1,31 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block main %}
-    <main>
+    <!--preloader-->
+        <div id="demo-content">
 
+		<div id="loader-wrapper">
+			<div id="loader"></div>
+			<div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+
+		</div>
+
+	</div>
+    <!--preloader end-->
+     <main>
        <section class="site_main">
+        <h1>Section identifying heading</h1>
 		<div class="container">
 			<div class="row">
 
                 <div id="lightgallery">
                     {% for photo in photos %}
                        <div class="col-xs-6 col-sm-4 col-md-3" data-src="{{ photo.photo.url }}" data-sub-html="<h4>{{ photo.title }}</h4><p>{{ photo.discription }}</p>">
-                        <div class="gallery_item">
-                    <a href="">
-                        <img class="img-responsive" src="{{ photo.photo.url }}">
-                    </a>
+                        <div class="gallery_item {% if forloop.last %} debating_info{% endif %}">
+                            <a href="">
+                        <img class="img-responsive" src="{{ photo.photo.url }}" alt="{{ photo.title }}">
+                            </a>
                         </div>
                     </div>
                     {% endfor %}

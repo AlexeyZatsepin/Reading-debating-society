@@ -53,7 +53,7 @@ class Visits(models.Model):
     class Meta():
         db_table = "Visit"
         verbose_name = "Visit"
-        verbose_name_plural = "Visits"
+        verbose_name_plural = "Main page visits"
         app_label = 'app'
 
     # page_choices={}

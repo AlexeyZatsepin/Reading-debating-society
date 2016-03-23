@@ -2,8 +2,8 @@
 {% load staticfiles %}
 {% block main %}
     <main>
-
-               <section class="site_main">
+        <section class="site_main">
+        <h1>Section identifying heading</h1>
 		<div class="container">
 			<div class="row">
 
@@ -19,7 +19,7 @@
                 <div class="col-md-10">
                     {% for album in albums %}
 				<div class="col-sm-6">
-					<div class="gallery_block clearfix">
+					<div class="gallery_block clearfix {% if forloop.last %} debating_info{% endif %}">
 				        <a href="{{ album.get_absolute_url }}">
                             <img src="{{ album.cover.url }}" alt="{{ album.title }}" ></a>
                         <div class="gallery_block_left">
@@ -39,7 +39,7 @@
 
                 </div>
              </div>
-		</div><br>
+		</div>
 	</section>
 
     </main>
