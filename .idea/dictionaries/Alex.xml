@@ -2,6 +2,7 @@
   <dictionary name="Alex">
     <words>
       <w>onkeydown</w>
+      <w>preload</w>
     </words>
   </dictionary>
 </component>
