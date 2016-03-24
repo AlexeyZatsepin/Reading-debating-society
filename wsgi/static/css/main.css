@@ -465,6 +465,28 @@ main {
     font-family: "Effra-bold";
 }
 
+_::-moz-svg-foreign-content, :root .footer_links h3 {
+margin: 0;
+margin-right: 40px;
+padding: 0;
+}
+
+_::-moz-svg-foreign-content, :root .footer_links {
+margin: 15px;
+line-height: 41px;
+vertical-align: middle;
+}
+
+_::-moz-svg-foreign-content, :root .footer_link {
+margin: 0;
+margin-right: 15px;
+padding: 0;
+}
+
+_::-moz-svg-foreign-content, :root .footer_mainline {
+padding: 10px 15px 0 15px;
+}
+
 .footer_bottomline {
     padding: 15px;
     background: #002429;
@@ -516,11 +538,16 @@ input[type=search]:focus {
 }
 }
 
-@media (max-width:320px) {
-    .footer_links h3 {
-    margin-right: 25px;
-    }
+@media (max-width:340px) {
+.footer_links h3 {
+margin-right: 20px;
 }
+.footer_link {
+margin-right: 10px;
+}
+}
+
+
 /* ------------------------Debating.html------------------------------ */
 .debating_info {
     margin-bottom: 30px;
@@ -1485,4 +1512,9 @@ figure a.close-caption.hidden {
 .no_found .info_window {
 margin-top: 150px;
 margin-bottom: 150px;
+}
+
+.content {
+background-color: #CFC7A4;
+min-height: calc(100vh - 127px);
 }
