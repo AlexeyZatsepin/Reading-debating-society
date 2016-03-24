@@ -52,8 +52,8 @@
                         <div class="item_item bgr clearfix">
 
                             <div class="item_media">
-                                {% if member.photo %}
-                                    <img src="{{ member }}" alt="{{ member.last_name }}" >
+                                {% if member.image %}
+                                    <img src="{{ member.image.url }}" alt="{{ member.last_name }}" >
                                 {% else %}
                                     <i class="fa fa-user"></i>
                                 {% endif %}</div>
