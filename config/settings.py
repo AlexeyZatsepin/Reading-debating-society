@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 if ON_OPENSHIFT:
-    DEBUG = True
+    DEBUG = False
     #TEMPLATE_DEBUG = False
     ALLOWED_HOSTS = ['*']
     DATABASES = {
