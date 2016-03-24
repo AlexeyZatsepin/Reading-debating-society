@@ -56,7 +56,7 @@ def registration(request):
     from .forms import Registration
     from .models import Alumni
     from django.core.mail import send_mail
-    form = Registration(request.POST, request.FILES or None)
+    form = Registration(request.POST or None)
     if form.is_valid() and request.method == 'POST':
         alunmi = Alumni()
         alunmi.first_name = form.cleaned_data.get('first_name')
