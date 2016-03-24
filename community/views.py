@@ -74,11 +74,12 @@ def registration(request):
         message = "You are very important for our alumni community!"
         recipients = list()
         recipients.append(alunmi.email)
+        recipients.append('alexzatsepin@outlook.com')
         request.session['thanks'] = subject + str(alunmi.first_name) + str(' ') + str(alunmi.last_name)
         request.session['has_registrated'] = True
         request.session.set_expiry(300)
         try:
-            send_mail(subject, message, 'alexzatsepin7@gmail.com', recipients, fail_silently=False)
+            send_mail(subject, message, 'auto.reading.debate.society@gmail.com', recipients, fail_silently=False)
         except:
             pass
         return redirect(database)

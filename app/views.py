@@ -57,7 +57,7 @@ def contact(request):
         subject = form.cleaned_data['subject']
         sender = form.cleaned_data['sender']
         message = form.cleaned_data['message']
-        recipients = ['alexzatsepin@outlook.com']
+        recipients = ['alexzatsepin@outlook.com','readingdebatesociety@gmail.com']
         try:
             send_mail(subject, message, 'alexzatsepin7@gmail.com', recipients, fail_silently=False)
             thanks = "Thank you %s! Your message was successfully sent." % sender
