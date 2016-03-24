@@ -158,20 +158,19 @@ else:
     MEDIA_URL = '/media/'
     MEDIA_ROOT = os.path.join(BASE_DIR, 'wsgi/static/media')
 
-'''
+
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
         'LOCATION': 'wsgi/files/tmp/cache'
     }
 }
-'''
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'alexzatsepin7@gmail.com'
-DEFAULT_FROM_EMAIL = 'alexzatsepin7@gmail.com'
-SERVER_EMAIL = 'alexzatsepin7@gmail.com'
-EMAIL_HOST_PASSWORD = 'apollo7nipestazXela'
+EMAIL_HOST_USER = 'auto.reading.debate.society@gmail.com'
+DEFAULT_FROM_EMAIL = 'auto.reading.debate.society@gmail.com'
+SERVER_EMAIL = 'auto.reading.debate.society@gmail.com'
+EMAIL_HOST_PASSWORD ='readingdebatesociety1!'
 EMAIL_PORT = 587

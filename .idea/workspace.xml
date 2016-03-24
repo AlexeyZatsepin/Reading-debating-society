@@ -2,187 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f957d364-d08c-4e0f-8251-3c2c9de788e7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wsgi/static/img/circle.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/Alex.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/search.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wsgi/static/libs/preloader/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wsgi/static/libs/preloader/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wsgi/static/libs/preloader/modernizr-2.6.2.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wsgi/static/libs/preloader/normalize.css" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/staticArticles/views.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wsgi/static/img/1-1600.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wsgi/static/img/1-375.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wsgi/static/img/1-480.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wsgi/static/img/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wsgi/static/img/13-1600.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wsgi/static/img/13-375.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wsgi/static/img/13-480.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wsgi/static/img/13.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wsgi/static/img/2-1600.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wsgi/static/img/2-375.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wsgi/static/img/2-480.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wsgi/static/img/2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wsgi/static/img/4-1600.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wsgi/static/img/4-375.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wsgi/static/img/4-480.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wsgi/static/img/4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wsgi/static/img/thumb-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wsgi/static/img/thumb-13.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wsgi/static/img/thumb-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wsgi/static/img/thumb-4.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/fonts/Effra_Bold/Effra_Std_Bd.ttf" afterPath="$PROJECT_DIR$/wsgi/static/fonts/Effra_Bold/Effra_Std_Bd.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/fonts/Effra_Bold/Effra_Std_Bd.woff" afterPath="$PROJECT_DIR$/wsgi/static/fonts/Effra_Bold/Effra_Std_Bd.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/fonts/Effra_Bold/Effra_Std_Bd.woff2" afterPath="$PROJECT_DIR$/wsgi/static/fonts/Effra_Bold/Effra_Std_Bd.woff2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/fonts/RobotoBold/RobotoBold.eot" afterPath="$PROJECT_DIR$/wsgi/static/fonts/RobotoBold/RobotoBold.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/fonts/RobotoBold/RobotoBold.ttf" afterPath="$PROJECT_DIR$/wsgi/static/fonts/RobotoBold/RobotoBold.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/fonts/RobotoBold/RobotoBold.woff" afterPath="$PROJECT_DIR$/wsgi/static/fonts/RobotoBold/RobotoBold.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/fonts/RobotoCondensedBold/RobotoCondensedBold.eot" afterPath="$PROJECT_DIR$/wsgi/static/fonts/RobotoCondensedBold/RobotoCondensedBold.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/fonts/RobotoCondensedBold/RobotoCondensedBold.ttf" afterPath="$PROJECT_DIR$/wsgi/static/fonts/RobotoCondensedBold/RobotoCondensedBold.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/fonts/RobotoCondensedBold/RobotoCondensedBold.woff" afterPath="$PROJECT_DIR$/wsgi/static/fonts/RobotoCondensedBold/RobotoCondensedBold.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/fonts/RobotoCondensedLight/RobotoCondensedLight.eot" afterPath="$PROJECT_DIR$/wsgi/static/fonts/RobotoCondensedLight/RobotoCondensedLight.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/fonts/RobotoCondensedLight/RobotoCondensedLight.ttf" afterPath="$PROJECT_DIR$/wsgi/static/fonts/RobotoCondensedLight/RobotoCondensedLight.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/fonts/RobotoCondensedLight/RobotoCondensedLight.woff" afterPath="$PROJECT_DIR$/wsgi/static/fonts/RobotoCondensedLight/RobotoCondensedLight.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/fonts/RobotoCondensedRegular/RobotoCondensedRegular.eot" afterPath="$PROJECT_DIR$/wsgi/static/fonts/RobotoCondensedRegular/RobotoCondensedRegular.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/fonts/RobotoCondensedRegular/RobotoCondensedRegular.ttf" afterPath="$PROJECT_DIR$/wsgi/static/fonts/RobotoCondensedRegular/RobotoCondensedRegular.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/fonts/RobotoCondensedRegular/RobotoCondensedRegular.woff" afterPath="$PROJECT_DIR$/wsgi/static/fonts/RobotoCondensedRegular/RobotoCondensedRegular.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/fonts/RobotoLight/RobotoLight.eot" afterPath="$PROJECT_DIR$/wsgi/static/fonts/RobotoLight/RobotoLight.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/fonts/RobotoLight/RobotoLight.ttf" afterPath="$PROJECT_DIR$/wsgi/static/fonts/RobotoLight/RobotoLight.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/fonts/RobotoLight/RobotoLight.woff" afterPath="$PROJECT_DIR$/wsgi/static/fonts/RobotoLight/RobotoLight.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/fonts/RobotoMedium/RobotoMedium.eot" afterPath="$PROJECT_DIR$/wsgi/static/fonts/RobotoMedium/RobotoMedium.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/fonts/RobotoMedium/RobotoMedium.ttf" afterPath="$PROJECT_DIR$/wsgi/static/fonts/RobotoMedium/RobotoMedium.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/fonts/RobotoMedium/RobotoMedium.woff" afterPath="$PROJECT_DIR$/wsgi/static/fonts/RobotoMedium/RobotoMedium.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/fonts/RobotoRegular/RobotoRegular.eot" afterPath="$PROJECT_DIR$/wsgi/static/fonts/RobotoRegular/RobotoRegular.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/fonts/RobotoRegular/RobotoRegular.ttf" afterPath="$PROJECT_DIR$/wsgi/static/fonts/RobotoRegular/RobotoRegular.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/fonts/RobotoRegular/RobotoRegular.woff" afterPath="$PROJECT_DIR$/wsgi/static/fonts/RobotoRegular/RobotoRegular.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/fonts/merriweather/merriweatherregular.ttf" afterPath="$PROJECT_DIR$/wsgi/static/fonts/merriweather/merriweatherregular.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/fonts/merriweather/merriweatherregular.woff" afterPath="$PROJECT_DIR$/wsgi/static/fonts/merriweather/merriweatherregular.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/fonts/merriweather/merriweatherregular.woff2" afterPath="$PROJECT_DIR$/wsgi/static/fonts/merriweather/merriweatherregular.woff2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/img/Info-icon.png" afterPath="$PROJECT_DIR$/wsgi/static/img/Info-icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/img/Rusu-white.png" afterPath="$PROJECT_DIR$/wsgi/static/img/Rusu-white.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/img/debate_new_logo.jpg" afterPath="$PROJECT_DIR$/wsgi/static/img/debate_new_logo.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/img/favicon.png" afterPath="$PROJECT_DIR$/wsgi/static/img/favicon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/img/graduate-icon.png" afterPath="$PROJECT_DIR$/wsgi/static/img/graduate-icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/img/icon.png" afterPath="$PROJECT_DIR$/wsgi/static/img/icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/img/logologo.png" afterPath="$PROJECT_DIR$/wsgi/static/img/logologo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/img/owl1.jpg" afterPath="$PROJECT_DIR$/wsgi/static/img/owl1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/img/owl2.jpg" afterPath="$PROJECT_DIR$/wsgi/static/img/owl2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/img/owl3.jpg" afterPath="$PROJECT_DIR$/wsgi/static/img/owl3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/img/owl4.jpg" afterPath="$PROJECT_DIR$/wsgi/static/img/owl4.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/img/owl5.jpg" afterPath="$PROJECT_DIR$/wsgi/static/img/owl5.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/img/owl6.jpg" afterPath="$PROJECT_DIR$/wsgi/static/img/owl6.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/img/readinglogo.png" afterPath="$PROJECT_DIR$/wsgi/static/img/readinglogo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/img/sponsor1.jpg" afterPath="$PROJECT_DIR$/wsgi/static/img/sponsor1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/img/sponsor2.png" afterPath="$PROJECT_DIR$/wsgi/static/img/sponsor2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/img/sponsor3.png" afterPath="$PROJECT_DIR$/wsgi/static/img/sponsor3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/img/sponsor4.png" afterPath="$PROJECT_DIR$/wsgi/static/img/sponsor4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/img/sponsor5.png" afterPath="$PROJECT_DIR$/wsgi/static/img/sponsor5.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/fancybox/blank.gif" afterPath="$PROJECT_DIR$/wsgi/static/libs/fancybox/blank.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/fancybox/fancybox_loading.gif" afterPath="$PROJECT_DIR$/wsgi/static/libs/fancybox/fancybox_loading.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/fancybox/fancybox_loading@2x.gif" afterPath="$PROJECT_DIR$/wsgi/static/libs/fancybox/fancybox_loading@2x.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/fancybox/fancybox_overlay.png" afterPath="$PROJECT_DIR$/wsgi/static/libs/fancybox/fancybox_overlay.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/fancybox/fancybox_sprite.png" afterPath="$PROJECT_DIR$/wsgi/static/libs/fancybox/fancybox_sprite.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/fancybox/fancybox_sprite@2x.png" afterPath="$PROJECT_DIR$/wsgi/static/libs/fancybox/fancybox_sprite@2x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/fancybox/helpers/fancybox_buttons.png" afterPath="$PROJECT_DIR$/wsgi/static/libs/fancybox/helpers/fancybox_buttons.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/font-awesome-4.2.0/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/wsgi/static/libs/font-awesome-4.2.0/fonts/FontAwesome.otf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/font-awesome-4.2.0/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/wsgi/static/libs/font-awesome-4.2.0/fonts/fontawesome-webfont.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/font-awesome-4.2.0/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/wsgi/static/libs/font-awesome-4.2.0/fonts/fontawesome-webfont.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/font-awesome-4.2.0/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/wsgi/static/libs/font-awesome-4.2.0/fonts/fontawesome-webfont.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/fonts/lg.eot" afterPath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/fonts/lg.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/fonts/lg.ttf" afterPath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/fonts/lg.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/fonts/lg.woff" afterPath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/fonts/lg.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/owl-carousel/AjaxLoader.gif" afterPath="$PROJECT_DIR$/wsgi/static/libs/owl-carousel/AjaxLoader.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/owl-carousel/grabbing.png" afterPath="$PROJECT_DIR$/wsgi/static/libs/owl-carousel/grabbing.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/admin.py" afterPath="$PROJECT_DIR$/app/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/forms.py" afterPath="$PROJECT_DIR$/app/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models.py" afterPath="$PROJECT_DIR$/app/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/base.html" afterPath="$PROJECT_DIR$/app/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/contact.html" afterPath="$PROJECT_DIR$/app/templates/contact.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/sponsors.html" afterPath="$PROJECT_DIR$/app/templates/sponsors.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/welcome.html" afterPath="$PROJECT_DIR$/app/templates/welcome.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/urls.py" afterPath="$PROJECT_DIR$/app/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views.py" afterPath="$PROJECT_DIR$/app/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/community/forms.py" afterPath="$PROJECT_DIR$/community/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/community/models.py" afterPath="$PROJECT_DIR$/community/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/community/templates/committe.html" afterPath="$PROJECT_DIR$/community/templates/committe.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/community/templates/database.html" afterPath="$PROJECT_DIR$/community/templates/database.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/community/templates/register.html" afterPath="$PROJECT_DIR$/community/templates/register.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/community/urls.py" afterPath="$PROJECT_DIR$/community/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/community/views.py" afterPath="$PROJECT_DIR$/community/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/settings.py" afterPath="$PROJECT_DIR$/config/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/urls.py" afterPath="$PROJECT_DIR$/config/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gallery/models.py" afterPath="$PROJECT_DIR$/gallery/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gallery/templates/album.html" afterPath="$PROJECT_DIR$/gallery/templates/album.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gallery/templates/gallery.html" afterPath="$PROJECT_DIR$/gallery/templates/gallery.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gallery/views.py" afterPath="$PROJECT_DIR$/gallery/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/materials/models.py" afterPath="$PROJECT_DIR$/materials/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/materials/templates/events.html" afterPath="$PROJECT_DIR$/materials/templates/events.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/materials/templates/materials.html" afterPath="$PROJECT_DIR$/materials/templates/materials.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/materials/urls.py" afterPath="$PROJECT_DIR$/materials/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/materials/views.py" afterPath="$PROJECT_DIR$/materials/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/css/fonts.css" afterPath="$PROJECT_DIR$/wsgi/static/css/fonts.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/css/main.css" afterPath="$PROJECT_DIR$/wsgi/static/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/fonts/merriweather/merriweather.css" afterPath="$PROJECT_DIR$/wsgi/static/fonts/merriweather/merriweather.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/js/common.js" afterPath="$PROJECT_DIR$/wsgi/static/js/common.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/js/modernizr.js" afterPath="$PROJECT_DIR$/wsgi/static/js/modernizr.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/bootstrap/bootstrap-grid-3.3.1.min.css" afterPath="$PROJECT_DIR$/wsgi/static/libs/bootstrap/bootstrap-grid-3.3.1.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/countdown/jquery.countdown-ru.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/countdown/jquery.countdown-ru.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/countdown/jquery.countdown.css" afterPath="$PROJECT_DIR$/wsgi/static/libs/countdown/jquery.countdown.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/countdown/jquery.countdown.min.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/countdown/jquery.countdown.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/countdown/jquery.plugin.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/countdown/jquery.plugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/fancybox/helpers/jquery.fancybox-buttons.css" afterPath="$PROJECT_DIR$/wsgi/static/libs/fancybox/helpers/jquery.fancybox-buttons.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/fancybox/helpers/jquery.fancybox-buttons.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/fancybox/helpers/jquery.fancybox-buttons.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/fancybox/helpers/jquery.fancybox-media.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/fancybox/helpers/jquery.fancybox-media.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/fancybox/helpers/jquery.fancybox-thumbs.css" afterPath="$PROJECT_DIR$/wsgi/static/libs/fancybox/helpers/jquery.fancybox-thumbs.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/fancybox/helpers/jquery.fancybox-thumbs.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/fancybox/helpers/jquery.fancybox-thumbs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/fancybox/jquery.fancybox.css" afterPath="$PROJECT_DIR$/wsgi/static/libs/fancybox/jquery.fancybox.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/fancybox/jquery.fancybox.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/fancybox/jquery.fancybox.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/fancybox/jquery.fancybox.pack.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/fancybox/jquery.fancybox.pack.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/font-awesome-4.2.0/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/wsgi/static/libs/font-awesome-4.2.0/css/font-awesome.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/font-awesome-4.2.0/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/wsgi/static/libs/font-awesome-4.2.0/fonts/fontawesome-webfont.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/html5shiv/es5-shim.min.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/html5shiv/es5-shim.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/html5shiv/html5shiv-printshiv.min.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/html5shiv/html5shiv-printshiv.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/html5shiv/html5shiv.min.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/html5shiv/html5shiv.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/html5shiv/respond.min.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/html5shiv/respond.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/jquery-mousewheel/jquery.mousewheel.min.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/jquery-mousewheel/jquery.mousewheel.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/jquery/jquery-1.11.1.min.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/jquery/jquery-1.11.1.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/landing-nav/navigation.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/landing-nav/navigation.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/css/lg-fb-comment-box.css" afterPath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/css/lg-fb-comment-box.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/css/lg-fb-comment-box.min.css" afterPath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/css/lg-fb-comment-box.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/css/lg-transitions.css" afterPath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/css/lg-transitions.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/css/lg-transitions.min.css" afterPath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/css/lg-transitions.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/css/lightgallery.css" afterPath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/css/lightgallery.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/css/lightgallery.min.css" afterPath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/css/lightgallery.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/fonts/lg.svg" afterPath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/fonts/lg.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/js/lg-autoplay.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/js/lg-autoplay.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/js/lg-autoplay.min.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/js/lg-autoplay.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/js/lg-fullscreen.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/js/lg-fullscreen.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/js/lg-fullscreen.min.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/js/lg-fullscreen.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/js/lg-hash.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/js/lg-hash.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/js/lg-hash.min.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/js/lg-hash.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/js/lg-pager.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/js/lg-pager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/js/lg-pager.min.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/js/lg-pager.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/js/lg-thumbnail.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/js/lg-thumbnail.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/js/lg-thumbnail.min.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/js/lg-thumbnail.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/js/lg-video.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/js/lg-video.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/js/lg-video.min.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/js/lg-video.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/js/lg-zoom.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/js/lg-zoom.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/js/lg-zoom.min.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/js/lg-zoom.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/js/lightgallery-all.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/js/lightgallery-all.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/js/lightgallery-all.min.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/js/lightgallery-all.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/js/lightgallery.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/js/lightgallery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/js/lightgallery.min.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/lightgallery/js/lightgallery.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/owl-carousel/owl.carousel.css" afterPath="$PROJECT_DIR$/wsgi/static/libs/owl-carousel/owl.carousel.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/owl-carousel/owl.carousel.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/owl-carousel/owl.carousel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/owl-carousel/owl.carousel.min.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/owl-carousel/owl.carousel.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/owl-carousel/owl.theme.css" afterPath="$PROJECT_DIR$/wsgi/static/libs/owl-carousel/owl.theme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/owl-carousel/owl.transitions.css" afterPath="$PROJECT_DIR$/wsgi/static/libs/owl-carousel/owl.transitions.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/respond/respond.min.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/respond/respond.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/scrollto/jquery.scrollTo.min.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/scrollto/jquery.scrollTo.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wsgi/static/libs/waypoints/waypoints-1.6.2.min.js" afterPath="$PROJECT_DIR$/wsgi/static/libs/waypoints/waypoints-1.6.2.min.js" />
     </list>
     <ignored path="new.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -234,14 +54,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/community/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.079155676">
+            <state vertical-scroll-proportion="0.0">
               <caret line="31" column="99" selection-start-line="31" selection-start-column="99" selection-end-line="31" selection-end-column="99" />
               <folding>
                 <element signature="e#0#65#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.17539267">
+              <caret line="160" column="0" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -280,7 +110,6 @@
         <option value="$PROJECT_DIR$/community/forms.py" />
         <option value="$PROJECT_DIR$/community/models.py" />
         <option value="$PROJECT_DIR$/gallery/views.py" />
-        <option value="$PROJECT_DIR$/config/settings.py" />
         <option value="$PROJECT_DIR$/app/views.py" />
         <option value="$PROJECT_DIR$/community/templates/database.html" />
         <option value="$PROJECT_DIR$/app/templates/base.html" />
@@ -295,6 +124,7 @@
         <option value="$PROJECT_DIR$/gallery/templates/gallery.html" />
         <option value="$PROJECT_DIR$/gallery/templates/album.html" />
         <option value="$PROJECT_DIR$/community/views.py" />
+        <option value="$PROJECT_DIR$/config/settings.py" />
       </list>
     </option>
   </component>
@@ -697,9 +527,9 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.56" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3305921" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3305921" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3262295" sideWeight="0.49466667" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3256579" sideWeight="0.49466667" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -999,14 +829,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="176" column="16" selection-start-line="176" selection-start-column="16" selection-end-line="176" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gallery/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1139,11 +961,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/community/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.079155676">
+        <state vertical-scroll-proportion="0.0">
           <caret line="31" column="99" selection-start-line="31" selection-start-column="99" selection-end-line="31" selection-end-column="99" />
           <folding>
             <element signature="e#0#65#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17539267">
+          <caret line="160" column="0" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
