@@ -25,12 +25,7 @@
     <option name="TEMPLATE_CONFIGURATION" value="Django" />
     <option name="TEMPLATE_FOLDERS">
       <list>
-        <option value="$USER_HOME$/new/community/templates" />
-        <option value="$USER_HOME$/new/app/templates" />
-        <option value="$USER_HOME$/new/gallery/templates" />
-        <option value="$USER_HOME$/new/materials/templates" />
-        <option value="$USER_HOME$/new/templates" />
-        <option value="$USER_HOME$/new/templates/admin" />
+        <option value="$MODULE_DIR$/app/templates" />
       </list>
     </option>
   </component>
