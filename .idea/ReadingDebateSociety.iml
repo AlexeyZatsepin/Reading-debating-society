@@ -4,7 +4,7 @@
     <facet type="django" name="Django">
       <configuration>
         <option name="rootFolder" value="$MODULE_DIR$" />
-        <option name="settingsModule" value="mytest/settings.py" />
+        <option name="settingsModule" value="config/settings.py" />
         <option name="manageScript" value="manage.py" />
         <option name="environment" value="&lt;map/&gt;" />
       </configuration>
@@ -25,12 +25,12 @@
     <option name="TEMPLATE_CONFIGURATION" value="Django" />
     <option name="TEMPLATE_FOLDERS">
       <list>
-        <option value="$MODULE_DIR$/community/templates" />
-        <option value="$MODULE_DIR$/app/templates" />
-        <option value="$MODULE_DIR$/gallery/templates" />
-        <option value="$MODULE_DIR$/materials/templates" />
-        <option value="$MODULE_DIR$/templates" />
-        <option value="$MODULE_DIR$/templates/admin" />
+        <option value="$USER_HOME$/new/community/templates" />
+        <option value="$USER_HOME$/new/app/templates" />
+        <option value="$USER_HOME$/new/gallery/templates" />
+        <option value="$USER_HOME$/new/materials/templates" />
+        <option value="$USER_HOME$/new/templates" />
+        <option value="$USER_HOME$/new/templates/admin" />
       </list>
     </option>
   </component>

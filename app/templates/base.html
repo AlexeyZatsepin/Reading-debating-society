@@ -34,7 +34,7 @@
 <div class="content">
 
 	<header class="top_header">
-		<div class="header_topline clearfix">
+		<div class="header_topline">
 			<div class="container">
 				<div class="col-md-12">
 					<div class="row">
@@ -82,7 +82,7 @@
           <li><a href="{% url 'contact' %}" {% if contact %} class="active" {% endif %}>Contact us</a></li>
           <li><form method="GET" action="{% url 'search' %}">
           	{% csrf_token %}
-          	{{ search }}
+          	{{ search.field }}
           </form></li>
 
 		</ul>
@@ -91,7 +91,7 @@
         <div class="handle_search">
             <form method="GET" action="{% url 'search' %}">
             {% csrf_token %}
-                {{ search }}
+                {{ search.field }}
             </form>
         </div>
 
@@ -160,7 +160,6 @@
     </script>
     {% endif %}
     {% if preload %}
-        <script src="{% static 'libs/preloader/loaders.css.js'%}"></script>
         <script src="{% static 'libs/preloader/main.js'%}"></script>
     {% endif %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>

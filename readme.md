@@ -14,3 +14,4 @@ Readme
 It means that superadmin can create part-admins for local tasks.
 For example admin only for gallery or events.
 13.Full cross-browser compatibility.
+14.Search for materials,events and photos at every page with search field!

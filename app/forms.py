@@ -11,8 +11,10 @@ class ContactForm(forms.Form):
 class SearchForm(forms.Form):
     field = forms.CharField(required=False, max_length=50,
                             widget=forms.TextInput(attrs={'type': 'search', 'placeholder': 'Search',
-                                                          'onkeydown': 'if (e)vent.keyCode==13){this.form.submit();return false;}'}),
+                                                          'onkeydown': 'if (e)vent.keyCode==13)'
+                                                                       '{this.form.submit();return false;}',
+                                                          'id': ''}),
                             validators=[validators.RegexValidator(
                                 regex="^[a-zA-z0-9!?- ]+$",
-                                message='NO!'
+                                message='No XSS!'
                             )])

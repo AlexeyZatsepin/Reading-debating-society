@@ -30,18 +30,18 @@ def counter():
 def index(request):
     counter()
     args = {'slider': Slider.objects.all(), 'flatblock': Flatblock.objects.get(title='welcome'),
-            'search': SearchForm(), 'title': "Reading Debating Society", 'preload': True}
+            'search': SearchForm(), 'title': "Reading Debating Society"}
     return render_to_response('welcome.html', args)
 
 
-@cache_page(60 * 10)
+@cache_page(60 * 2)
 def debating(request):
     args = {'flatblock': Flatblock.objects.get(title='debating'), 'search': SearchForm(), 'title': "Debating",
             'debating': True}
     return render_to_response('debating.html', args)
 
 
-@cache_page(60 * 5)
+@cache_page(60 * 2)
 def sponsors(request):
     args = {'sponsors': Sponsor.objects.all(), 'search': SearchForm(), 'title': "Our sponsors", 'sponsors_page': True}
     return render_to_response('sponsors.html', args)

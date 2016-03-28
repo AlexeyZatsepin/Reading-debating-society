@@ -13,7 +13,7 @@ def materials(request):
     return render_to_response('materials.html', args)
 
 
-@cache_page(60 * 15)
+@cache_page(60 * 10)
 def events(request):
     from django.utils.datetime_safe import date
     from django.db.models import Min, Max

@@ -6,7 +6,7 @@ from app.forms import SearchForm
 from .models import Committee, Committee_stuff, Alumni
 
 
-@cache_page(60 * 10)
+@cache_page(60 * 5)
 def committee(request, time=''):
     years_list = sorted(list(set(Committee.objects.values_list('time', flat=True))))
     from django.utils import timezone

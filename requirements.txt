@@ -3,7 +3,6 @@ dj-database-url==0.4.0
 django-appconf==1.0.1
 django-extra-views==0.6.4
 django-google-charts==0.1.1
-django-haystack==2.4.1
 django-imagekit==3.3
 django-qsstats-magic==0.7.2
 django-tables2==1.0.4
@@ -11,3 +10,8 @@ django-treebeard==3.0
 django-widget-tweaks==1.4.1
 Pillow==2.8.2
 python-dateutil==1.5
+argparse-1.4.0
+django-htmlmin-0.9.1
+html5lib-0.9999999
+six-1.10.0
+
