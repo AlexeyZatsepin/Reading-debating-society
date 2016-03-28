@@ -1,9 +1,9 @@
 RewriteEngine On
 RewriteRule ^application/media/(.+)$ /static/media/$1 [L]
 
-FileETag MTime Size
-ExpiresActive On
-ExpiresDefault “access plus 7 days”
+#FileETag MTime Size
+#ExpiresActive On
+#ExpiresDefault “access plus 7 days”
 #ExpiresByType image/gif “access plus 1 year”
 #ExpiresByType image/jpeg “access plus 1 year”
 #ExpiresByType image/png “access plus 1 year”
@@ -17,4 +17,4 @@ ExpiresDefault “access plus 7 days”
 #BrowserMatch “MSIE” force-no-vary
 #BrowserMatch “Mozilla/4.[0-9]{2}” force-no-vary
 
-Header set Cache-Control “max-age=2592000, public”
+#Header set Cache-Control “max-age=2592000, public”
