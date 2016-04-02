@@ -30,7 +30,7 @@ def counter():
 def index(request):
     counter()
     args = {'slider': Slider.objects.all(), 'flatblock': Flatblock.objects.get(title='welcome'),
-            'search': SearchForm(), 'searchMobile':SearchFormMobile(), 'title': "Reading Debating Society"}
+            'search': SearchForm(), 'searchMobile':SearchFormMobile(), 'title': "Reading Debating Society", 'index':True}
     return render_to_response('welcome.html', args)
 
 

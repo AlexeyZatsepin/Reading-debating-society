@@ -18,6 +18,10 @@
 	<link rel="stylesheet" href="{% static 'libs/font-awesome-4.2.0/css/font-awesome.min.css'%}" >
 	<link rel="stylesheet" href="{% static 'css/fonts.css'%}" >
 	<link rel="stylesheet" href="{% static 'css/main.css' %}" >
+    {% if index %}
+	    <link rel="stylesheet" href="{% static 'libs/fancybox/jquery.fancybox.css'%}" >
+	    <link rel="stylesheet" href="{% static 'libs/owl-carousel/owl.carousel.css'%}" >
+    {% endif %}
     {% if preload %}
         <link rel="stylesheet" href="{% static 'libs/preloader/normalize.css'%}">
 	    <link rel="stylesheet" href="{% static 'libs/preloader/main.css'%}">
@@ -134,7 +138,10 @@
 
     </footer>
 	<script src="{% static 'libs/jquery/jquery-1.11.1.min.js'%}"></script>
-	<script src="{% static 'libs/owl-carousel/owl.carousel.min.js'%}"></script>
+    {% if index %}
+        <script src="{% static 'libs/fancybox/jquery.fancybox.pack.js'%}"></script>
+	    <script src="{% static 'libs/owl-carousel/owl.carousel.min.js'%}"></script>
+    {% endif %}
     <script src="{% static 'js/common.js'%}"></script>
     {% if gallery %}
         <script src="{% static 'libs/lightgallery/js/lightgallery.min.js'%}"></script>
