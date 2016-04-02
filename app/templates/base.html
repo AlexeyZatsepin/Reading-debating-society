@@ -30,7 +30,6 @@
     {% if gallery %}
         <link rel="stylesheet" href="{% static 'libs/lightgallery/css/lightgallery.css' %}">
     {% endif %}
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 </head>
 <body>
 
@@ -141,8 +140,8 @@
     {% if index %}
         <script src="{% static 'libs/fancybox/jquery.fancybox.pack.js'%}"></script>
 	    <script src="{% static 'libs/owl-carousel/owl.carousel.min.js'%}"></script>
+        <script src="{% static 'js/common.js'%}"></script>
     {% endif %}
-    <script src="{% static 'js/common.js'%}"></script>
     {% if gallery %}
         <script src="{% static 'libs/lightgallery/js/lightgallery.min.js'%}"></script>
         <script type="text/javascript">
