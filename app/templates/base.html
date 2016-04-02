@@ -7,18 +7,17 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="description" content="Debate Society Responsive" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="shortcut icon" href="{% static 'img/readinglogo.png'%}" />
+	<meta name="description" content="Debate Society Responsive" >
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" >
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta name="keywords" content="society,debate,Reading" >
+	<meta name="description" content="Website of Debate Society of University of Reading, where you can join the society, obtain a lot of information, watch our news and events, and much more." >
+	<link rel="shortcut icon" href="{% static 'img/readinglogo.png'%}" >
 	<title>{{ title|default:'Debate Society' }}</title>
-    <link rel="stylesheet" href="{% static 'libs/bootstrap/bootstrap-grid-3.3.1.min.css'%}" />
-	<link rel="stylesheet" href="{% static 'libs/font-awesome-4.2.0/css/font-awesome.min.css'%}" />
-	<link rel="stylesheet" href="{% static 'libs/fancybox/jquery.fancybox.css'%}" />
-	<link rel="stylesheet" href="{% static 'libs/owl-carousel/owl.carousel.css' %}" />
-	<link rel="stylesheet" href="{% static 'libs/countdown/jquery.countdown.css'%}" />
-	<link rel="stylesheet" href="{% static 'css/fonts.css'%}" />
-	<link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <link rel="stylesheet" href="{% static 'libs/bootstrap/bootstrap-grid-3.3.1.min.css'%}" >
+	<link rel="stylesheet" href="{% static 'libs/font-awesome-4.2.0/css/font-awesome.min.css'%}" >
+	<link rel="stylesheet" href="{% static 'css/fonts.css'%}" >
+	<link rel="stylesheet" href="{% static 'css/main.css' %}" >
     {% if preload %}
         <link rel="stylesheet" href="{% static 'libs/preloader/normalize.css'%}">
 	    <link rel="stylesheet" href="{% static 'libs/preloader/main.css'%}">
@@ -86,12 +85,11 @@
           </form></li>
 
 		</ul>
-
 		<div class="handle"><i class="fa fa-bars"></i></div>
         <div class="handle_search">
             <form method="GET" action="{% url 'search' %}">
             {% csrf_token %}
-                {{ search.field }}
+                {{ searchMobile.field }}
             </form>
         </div>
 
@@ -135,37 +133,20 @@
 
 
     </footer>
-    <!--[if lt IE 9]>
-	<script src="libs/html5shiv/es5-shim.min.js"></script>
-	<script src="libs/html5shiv/html5shiv.min.js"></script>
-	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
-	<script src="libs/respond/respond.min.js"></script>
-	<![endif]-->
 	<script src="{% static 'libs/jquery/jquery-1.11.1.min.js'%}"></script>
-	<script src="{% static 'libs/jquery-mousewheel/jquery.mousewheel.min.js'%}"></script>
-	<script src="{% static 'libs/fancybox/jquery.fancybox.pack.js'%}"></script>
-	<script src="{% static 'libs/waypoints/waypoints-1.6.2.min.js'%}"></script>
-	<script src="{% static 'libs/scrollto/jquery.scrollTo.min.js'%}"></script>
 	<script src="{% static 'libs/owl-carousel/owl.carousel.min.js'%}"></script>
-	<script src="{% static 'libs/countdown/jquery.plugin.js'%}"></script>
-	<script src="{% static 'libs/countdown/jquery.countdown.min.js'%}"></script>
-	<script src="{% static 'libs/countdown/jquery.countdown-ru.js'%}"></script>
-	<script src="{% static 'libs/landing-nav/navigation.js'%}"></script>
+    <script src="{% static 'js/common.js'%}"></script>
     {% if gallery %}
-    <script src="{% static 'libs/lightgallery/js/lightgallery.min.js'%}"></script>
-    <script type="text/javascript">
-    $(document).ready(function() {
-        $("#lightgallery").lightGallery();
-    });
-    </script>
+        <script src="{% static 'libs/lightgallery/js/lightgallery.min.js'%}"></script>
+        <script type="text/javascript">
+        $(document).ready(function() {
+            $("#lightgallery").lightGallery();
+        });
+        </script>
     {% endif %}
     {% if preload %}
         <script src="{% static 'libs/preloader/main.js'%}"></script>
     {% endif %}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
-    <script src="{% static 'libs/lightgallery/js/lg-thumbnail.min.js'%}"></script>
-    <script src="{% static 'libs/lightgallery/js/lg-fullscreen.min.js'%}"></script>
-	<script src="{% static 'js/common.js'%}"></script>
 	<script>
 		$('.handle').on('click', function(){
 		$('nav ul').toggleClass('showing');

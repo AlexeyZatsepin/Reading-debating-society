@@ -13,7 +13,19 @@ class SearchForm(forms.Form):
                             widget=forms.TextInput(attrs={'type': 'search', 'placeholder': 'Search',
                                                           'onkeydown': 'if (e)vent.keyCode==13)'
                                                                        '{this.form.submit();return false;}',
-                                                          'id': ''}),
+                                                          'id': 'main'}),
+                            validators=[validators.RegexValidator(
+                                regex="^[a-zA-z0-9!?- ]+$",
+                                message='No XSS!'
+                            )])
+
+
+class SearchFormMobile(forms.Form):
+    field = forms.CharField(required=False, max_length=50,
+                            widget=forms.TextInput(attrs={'type': 'search', 'placeholder': 'Search',
+                                                          'onkeydown': 'if (e)vent.keyCode==13)'
+                                                                       '{this.form.submit();return false;}',
+                                                          'id': 'mobile'}),
                             validators=[validators.RegexValidator(
                                 regex="^[a-zA-z0-9!?- ]+$",
                                 message='No XSS!'

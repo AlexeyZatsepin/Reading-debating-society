@@ -2,7 +2,7 @@ from django.shortcuts import render, render_to_response, redirect
 from django.views.decorators.cache import cache_page
 from django.views.decorators.csrf import csrf_protect
 from django.views.decorators.debug import sensitive_variables
-from app.forms import SearchForm
+from app.forms import SearchForm, SearchFormMobile
 from .models import Committee, Committee_stuff, Alumni
 
 
@@ -21,7 +21,7 @@ def committee(request, time=''):
         else:
             args.update({'title': "Commitee", 'com': Committee.objects.get(time=time)})
 
-    args.update({'years': years_list, 'search': SearchForm(), 'committee': True})
+    args.update({'years': years_list, 'search': SearchForm(), 'searchMobile':SearchFormMobile(), 'committee': True})
     return render_to_response('committe.html', args)
 
 
@@ -30,7 +30,7 @@ def database(request, years='', courses='', company=''):
     years_list = sorted(list(set(Alumni.objects.values_list('time_in_society', flat=True))))
     courses_list = sorted(list(set(Alumni.objects.values_list('courses', flat=True))))
     companies_list = sorted(list(set(Alumni.objects.values_list('current_occupation', flat=True))))
-    args = {'years': years_list, 'courses': courses_list, 'companies': companies_list}
+    args = {'years': years_list, 'courses': courses_list, 'companies': companies_list, 'searchMobile': SearchFormMobile()}
     if 'thanks' in request.session:
         args.update({'thanks': request.session['thanks']})
     if years == '' and courses == '' and company == '':
@@ -83,5 +83,5 @@ def registration(request):
         except:
             pass
         return redirect(database)
-    args = {'form': form, 'search': SearchForm(), 'title': "Register as Alumni",'regas':True}
+    args = {'form': form, 'search': SearchForm(), 'searchMobile':SearchFormMobile(), 'title': "Register as Alumni",'regas':True}
     return render(request, 'register.html', args)

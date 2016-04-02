@@ -30,20 +30,20 @@ def counter():
 def index(request):
     counter()
     args = {'slider': Slider.objects.all(), 'flatblock': Flatblock.objects.get(title='welcome'),
-            'search': SearchForm(), 'title': "Reading Debating Society"}
+            'search': SearchForm(), 'searchMobile':SearchFormMobile(), 'title': "Reading Debating Society"}
     return render_to_response('welcome.html', args)
 
 
 @cache_page(60 * 2)
 def debating(request):
-    args = {'flatblock': Flatblock.objects.get(title='debating'), 'search': SearchForm(), 'title': "Debating",
+    args = {'flatblock': Flatblock.objects.get(title='debating'), 'search': SearchForm(), 'searchMobile':SearchFormMobile(), 'title': "Debating",
             'debating': True}
     return render_to_response('debating.html', args)
 
 
 @cache_page(60 * 2)
 def sponsors(request):
-    args = {'sponsors': Sponsor.objects.all(), 'search': SearchForm(), 'title': "Our sponsors", 'sponsors_page': True}
+    args = {'sponsors': Sponsor.objects.all(), 'search': SearchForm(), 'searchMobile':SearchFormMobile(), 'title': "Our sponsors", 'sponsors_page': True}
     return render_to_response('sponsors.html', args)
 
 
@@ -52,12 +52,12 @@ def contact(request):
     from django.core.mail import send_mail
     # args.update(csrf(request))
     form = ContactForm(request.POST or None)
-    args = {'form': form, 'search': SearchForm(), 'title': "Contact us", 'contact': True}
+    args = {'form': form, 'search': SearchForm(), 'searchMobile':SearchFormMobile(), 'title': "Contact us", 'contact': True}
     if form.is_valid() and request.method == 'POST':
         subject = form.cleaned_data['subject']
         sender = form.cleaned_data['sender']
         message = form.cleaned_data['message']
-        recipients = ['alexzatsepin@outlook.com','readingdebatesociety@gmail.com']
+        recipients = ['alexzatsepin@outlook.com', 'readingdebatesociety@gmail.com']
         try:
             send_mail(subject, message, 'alexzatsepin7@gmail.com', recipients, fail_silently=False)
             thanks = "Thank you %s! Your message was successfully sent." % sender
@@ -78,7 +78,7 @@ def search(request):
     gallery_result = Album.objects.filter(
         Q(title__contains=request.GET['field']) | Q(year__contains=request.GET['field']))
     args = {'materials': materials_result, 'events': events_result, 'albums': gallery_result, 'search': SearchForm(),
-            'title': title}
+            'searchMobile':SearchFormMobile(),'title': title}
     return render_to_response('search.html', args)
 
 
