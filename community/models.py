@@ -33,8 +33,8 @@ class Committee_stuff(models.Model):
     committee = models.ForeignKey(Committee)
 
     def get_image(self):
-        if self.photo:
-            return u'<img src="%s" width="100"/>' % self.photo.url
+        if self.image:
+            return u'<img src="%s" width="100"/>' % self.image.url
         else:
             return u'<p>Something wrong with this image</p>'
 
