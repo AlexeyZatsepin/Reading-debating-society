@@ -528,15 +528,18 @@ _::-webkit-full-page-media, _:future, :root .footer_mainline { padding: 10px 15p
     background: #002429;
     text-align: center;
     color: #cdcdcd;
-    text-transform: uppercase;
     font-size: 10px;
-    word-spacing: 2px;
+    word-spacing: 1px;
 }
 
-.footer_bottomline span {
+.footer_bottomline a {
     color: #CFC7A4;
+    text-transform: uppercase;
 }
 
+.footer_bottomline a:hover{
+    color: #CFC620;
+}
 input[type=search] {
    
     background: #e5e5e5 url("../img/icon.png") no-repeat 9px center;
@@ -1570,3 +1573,5 @@ min-height: calc(100vh - 127px);
     min-height: calc(100vh - 128px);
 }
 }
+
+
