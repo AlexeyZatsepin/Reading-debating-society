@@ -15,6 +15,12 @@ ExpiresByType application/x-shockwave-flash "access plus 1 month"
 ExpiresByType image/x-icon "access plus 1 year"
 ExpiresDefault "access plus 2 days"
 </IfModule>
+
+RewriteCond %{HTTP_USER_AGENT} libwww-perl.*
+RewriteRule .* ? [F,L]
+
+RewriteCond %{HTTP_HOST} ^www\.example\.com$
+RewriteRule ^/?$ "http\:\/\/example\.com\/" [R=301,L]
 #FileETag MTime Size
 #ExpiresActive On
 #ExpiresDefault “access plus 7 days”
