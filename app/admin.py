@@ -1,7 +1,6 @@
 from django.contrib import admin
 from django.contrib.admin.options import csrf_protect_m
 from django.contrib.auth.models import Group
-from django.views.decorators.cache import never_cache
 
 from .models import  Sponsor, Slider, Visits
 
@@ -14,9 +13,6 @@ class SliderAdmin(admin.ModelAdmin):
 class SponsorAdmin(admin.ModelAdmin):
     list_display = ('get_image', 'name')
     search_fields = ['name']
-
-
-from django.contrib.admin import AdminSite
 
 
 class VisitManager(admin.ModelAdmin):

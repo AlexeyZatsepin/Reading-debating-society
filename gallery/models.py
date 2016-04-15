@@ -1,9 +1,10 @@
 from __future__ import unicode_literals
 from django.db import models
+from image_cropping import ImageRatioField
 
 
 class Album(models.Model):
-    class Meta():
+    class Meta:
         db_table = "Albums"
 
     year_choises = (
@@ -29,6 +30,7 @@ class Album(models.Model):
     cover = models.ImageField(upload_to='images')
     year = models.CharField(max_length=10, choices=year_choises, default=2016)
     title = models.CharField(max_length=60, verbose_name= "album title")
+    #cropping = ImageRatioField('cover', '437x246')
 
     def get_image(self):
         if self.cover:
@@ -41,16 +43,16 @@ class Album(models.Model):
 
 
 class Photo(models.Model):
-    class Meta():
+    class Meta:
         db_table = "Photos"
 
     def __str__(self):
         return self.title
 
     album_id = models.ForeignKey(Album, on_delete=models.CASCADE, verbose_name="Album")
-    photo = models.ImageField(upload_to='images',verbose_name="photo title", help_text="Photos in one album must have equal size!")
-    title = models.TextField()
-    discription = models.TextField(blank=True)
+    photo = models.ImageField(upload_to='images', verbose_name="photo title", help_text="Photos in one album must have equal size!")
+    title = models.CharField(max_length=200)
+    description = models.TextField(blank=True, help_text="it isn't necessary!")
 
     def get_image(self):
         if self.photo:

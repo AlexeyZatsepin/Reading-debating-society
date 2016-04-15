@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load imagekit %}
+{% block main %}
+    <main>
+        <section class="site_main">
+		  <div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="committee_block">
+                     <!-- CHANGE BLOCK -->   <h2><i class="fa fa-briefcase" aria-hidden="true"></i>Workshops</h2> <!-- END CHANGE BLOCK -->
+                     <!-- CHANGE BLOCK -->
+                    {% if filter %}
+                    <ul class="filter">
+                    {% for item in filter %}
+                                <li><a href="#">{{ filter.name }} <i class="fa fa-sort-desc"></i></a>
+                                    <ul class="sub-filter">
+                                        <li><a href="#">{{ filter.url }}</a></li>
+                                    </ul>
+                                </li>
+                    {% endfor %}
+                    </ul>
+                    {% endif %}
+                        <ul id="myList">
+                            {% for workshop in workshops %}
+                            <li>
+                                <div class="blog_item clearfix">
+
+                                    <div class="blog_item_header">
+                                        <h3>{{ workshop.title }}</h3>
+                                        <span><i class="fa fa-clock-o" aria-hidden="true"></i>{{ workshop.timestamp }}</span>
+                                    </div>
+
+                                    <div class="blog_item_main">
+                                        {% if workshop.image %}
+                                        <div class="blog_item_media">
+                                            <img src="{{ workshop.image.url }}" height="120" width="auto" alt="Post photo">
+                                        </div>
+                                        {% endif %}
+                                        <p>{{ workshop.description }}</p>
+                                    </div>
+                                </div>
+                            </li>
+                            {% empty %}
+                                <li>
+                                    <div class="info_window">
+                                        <i class="fa fa-info-circle"></i>Sorry we haven't current workshops
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% if workshops|length > 3 %}
+                        <div id="loadMore" class="learn_button hvr-wobble-horizontal"><i class="fa fa-refresh"></i>Load more</div>
+                    {% endif %}
+                    </div>
+                </div>
+              </div>
+            </div>
+	</section>
+    </main>
+{% endblock %}

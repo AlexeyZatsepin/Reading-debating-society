@@ -32,7 +32,8 @@ $(document).ready(function() {
 	$(".prev_button").click(function() {
 		owl.trigger("owl.prev");
 	});
-    
+
 });
+
 
 

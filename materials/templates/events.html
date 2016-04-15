@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
+{% load imagekit %}
 {% block main %}
     <main>
 
@@ -15,10 +16,10 @@
                 <div class="col-sm-6 col-md-4">
 					<div class="gallery_block clearfix">
 				        <figure>
-                           <img src="{{ event.image.url }}" alt="">
+                            {% thumbnail '400x240' event.image %}
                            <figcaption>
                                <h3>{{ event.title }}</h3>
-                               <span>{{ event.short_discription }}</span>
+                               <span>{{ event.description }}</span>
                                <a href="#" class="close-caption hidden">x</a>
                            </figcaption>
                         </figure>
@@ -59,10 +60,10 @@
                 <div class="col-sm-6 col-md-4">
 					<div class="gallery_block clearfix">
 				        <figure>
-                           <img src="{{ event.image.url }}" alt="">
+                           {% thumbnail '400x250'  event.image %}
                            <figcaption>
                                <h3>{{ event.title }}</h3>
-                               <span>{{ event.short_discription }}</span>
+                               <span>{{ event.description }}</span>
                                <a href="#" class="close-caption hidden">x</a>
                            </figcaption>
                         </figure>

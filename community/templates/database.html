@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
+{% load imagekit %}
 {% block main %}
     <main>
         <section class="site_main">
@@ -47,31 +48,47 @@
                             <i class="fa fa-info-circle"></i>{{ thanks }}
                             </div>
                         {% endif %}
-
+                        <ul id="myList">
                         {% for member in db %}
-                        <div class="item_item bgr clearfix">
-
+                        <li>
+                        <div class="bgr clearfix">
                             <div class="item_media">
+                            <a href="mailto:{{ member.email }}" title="Click to send email to {{ member }}">
                                 {% if member.image %}
-                                    <img src="{{ member.image.url }}" alt="{{ member.last_name }}" >
+                                    {% thumbnail '300x300'  member.image -- alt="{{ member.last_name }}" %}
+                                    {#<!--<img src="{{ member.image.url }}" alt="{{ member.last_name }}" >-->#}
                                 {% else %}
                                     <i class="fa fa-user"></i>
-                                {% endif %}</div>
+                                {% endif %}
+                            </a>
+                            </div>
                             <div class="item_main">
                                <h2>{{ member }}</h2>
                                <div class="item_info">
-                                    <i class="fa fa-calendar"></i><span class="p_bold">Years at society:</span> {{ member.time_in_society }}<br>
-                                    <i class="fa fa-university"></i><span class="p_bold">Course studied at Reading:</span> {{ member.courses }}<br>
-                                    <i class="fa fa-building"></i><span class="p_bold">Current Company:</span> {{ member.current_occupation }}<br>
+                                   <i class="fa fa-calendar"></i><span class="p_bold">Years at society:</span> {{ member.time_in_society }}<br>
+                                   <i class="fa fa-university"></i><span class="p_bold">Course studied at Reading:</span> {{ member.courses }}<br>
+                                   <i class="fa fa-building"></i><span class="p_bold">Current Company:</span> {{ member.current_occupation }}<br>
+                                   <i class="fa fa-envelope"></i><span class="p_bold">Email:</span> {{ member.email }}<br>
+                                   <a class="alumni_link" href="{{ member.facebook }}">
+                                        <i class="fa fa-facebook"></i>
+                                   </a>
+                                   <a class="alumni_link linkedin" href="{{ member.linkedin }}">
+                                        <i class="fa fa-linkedin"></i>
+                                   </a>
                                </div>
                             </div>
-                            </div>
+                        </div>
+                        </li>
                         {% empty %}
                             <div class="info_window">
                             <i class="fa fa-info-circle"></i>
-                            Please check database at admin page it is empty!
+                            This page doesn't exists.
                             </div>
                         {% endfor %}
+                        </ul>
+                    {% if db|length > 3 %}
+                        <div id="loadMore" class="learn_button hvr-wobble-horizontal"><i class="fa fa-refresh"></i>Load more</div>
+                    {% endif %}
                     </div>
                 </div>
               </div>

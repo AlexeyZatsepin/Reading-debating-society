@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
+{% load imagekit %}
 {% block main %}
     <main>
         <section class="site_main">
@@ -21,7 +22,7 @@
 				<div class="col-sm-6">
 					<div class="gallery_block clearfix {% if forloop.last %} debating_info{% endif %}">
 				        <a href="{{ album.get_absolute_url }}">
-                            <img src="{{ album.cover.url }}" alt="{{ album.title }}" ></a>
+                            {% thumbnail '400x240'  album.cover %}</a>
                         <div class="gallery_block_left">
                             <i class="fa fa-camera"></i>
                             <span class="hint">Album</span>

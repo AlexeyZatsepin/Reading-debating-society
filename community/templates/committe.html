@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
+{% load imagekit %}
 {% block main %}
     <main>
         <section class="site_main">
@@ -16,7 +17,7 @@
                         <div class="item_item clearfix">
                             <div class="item_media">
                                 {% if member.image %}
-                                    <img src="{{ member.image.url }}" alt="{{ member.name }}" >
+                                   {% thumbnail '300x300'  member.image -- alt="{{ member.last_name }}" %}
                                 {% else %}
                                     <div class="item_media"><i class="fa fa-user"></i></div>
                                 {% endif %}
@@ -27,7 +28,7 @@
                                     {{ member.position }}</span>
                                <h2>{{ member.name }}</h2>
                                <div class="item_info">
-                                <p>{{ member.discription }}
+                                <p>{{ member.description }}
                                </div>
 
                             </div>

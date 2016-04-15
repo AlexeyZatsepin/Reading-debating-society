@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'staticArticles',
     'googlecharts',
     'widget_tweaks',
+    'imagekit',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -56,7 +57,7 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    #'htmlmin.middleware.HtmlMinifyMiddleware',
+    # 'htmlmin.middleware.HtmlMinifyMiddleware',
     'django.middleware.gzip.GZipMiddleware'
 
 ]
@@ -86,7 +87,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 if ON_OPENSHIFT:
     DEBUG = False
-    #TEMPLATE_DEBUG = False
+    # TEMPLATE_DEBUG = False
     ALLOWED_HOSTS = ['*']
     DATABASES = {
         'default': {
@@ -182,5 +183,13 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'auto.reading.debate.society@gmail.com'
 DEFAULT_FROM_EMAIL = 'auto.reading.debate.society@gmail.com'
 SERVER_EMAIL = 'auto.reading.debate.society@gmail.com'
-EMAIL_HOST_PASSWORD ='readingdebatesociety1!'
+EMAIL_HOST_PASSWORD = 'readingdebatesociety1!'
 EMAIL_PORT = 587
+
+
+from easy_thumbnails.conf import Settings as thumbnail_settings
+
+
+THUMBNAIL_PROCESSORS = (
+                           'image_cropping.thumbnail_processors.crop_corners',
+                       ) + thumbnail_settings.THUMBNAIL_PROCESSORS

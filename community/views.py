@@ -3,7 +3,7 @@ from django.views.decorators.cache import cache_page
 from django.views.decorators.csrf import csrf_protect
 from django.views.decorators.debug import sensitive_variables
 from app.forms import SearchForm, SearchFormMobile
-from .models import Committee, Committee_stuff, Alumni
+from .models import Committee, CommitteeMembers, Alumni
 
 
 @cache_page(60 * 5)
@@ -12,16 +12,16 @@ def committee(request, time=''):
     from django.utils import timezone
     today = timezone.now()
     if time == '':
-        current = Committee_stuff.objects.filter(committee__time__contains=today.year)
+        current = CommitteeMembers.objects.filter(committee__time__contains=today.year)
         args = {'title': "Current committe", 'stuff': current}
     else:
-        args = {'stuff': Committee_stuff.objects.filter(committee__time=time)}
+        args = {'stuff': CommitteeMembers.objects.filter(committee__time=time)}
         if str(today.year) in time:
             args.update({'title': "Current commitee"})
         else:
             args.update({'title': "Commitee", 'com': Committee.objects.get(time=time)})
 
-    args.update({'years': years_list, 'search': SearchForm(), 'searchMobile':SearchFormMobile(), 'committee': True})
+    args.update({'years': years_list, 'search': SearchForm(), 'searchMobile': SearchFormMobile(), 'committee': True})
     return render_to_response('committe.html', args)
 
 
@@ -31,19 +31,23 @@ def database(request, years='', courses='', company=''):
     courses_list = sorted(list(set(Alumni.objects.values_list('courses', flat=True))))
     companies_list = sorted(list(set(Alumni.objects.values_list('current_occupation', flat=True))))
     args = {'years': years_list, 'courses': courses_list, 'companies': companies_list, 'searchMobile': SearchFormMobile()}
+    #print(years_list)
+    #print(type(years_list))
+    for item in years_list:
+        print(item)
     if 'thanks' in request.session:
         args.update({'thanks': request.session['thanks']})
     if years == '' and courses == '' and company == '':
         args['db'] = Alumni.objects.all()
     elif years != '':
         args['db'] = Alumni.objects.filter(time_in_society=years)
-        print(years)
     elif courses != '':
         args['db'] = Alumni.objects.filter(courses=courses)
     elif company != '':
         args['db'] = Alumni.objects.filter(current_occupation=company)
     args['search'] = SearchForm()
     args['title'] = "Alumni database"
+    args['loadmore'] = True
     return render_to_response('database.html', args)
 
 

@@ -5,10 +5,10 @@ from django.utils import timezone
 
 
 class Sponsor(models.Model):
-    class Meta():
+    class Meta:
         db_table = "Sponsors"
 
-    name = models.CharField(max_length=10)
+    name = models.CharField(max_length=60)
     image = models.ImageField(upload_to='images')
     link = models.URLField(help_text='sponsors link, url like : http://google.com')
     description = models.TextField()
@@ -29,7 +29,7 @@ class Sponsor(models.Model):
 
 
 class Slider(models.Model):
-    class Meta():
+    class Meta:
         db_table = "Slider"
         verbose_name = "photo"
         verbose_name_plural = 'Slides'
@@ -50,7 +50,7 @@ class Slider(models.Model):
 
 
 class Visits(models.Model):
-    class Meta():
+    class Meta:
         db_table = "Visit"
         verbose_name = "Visit"
         verbose_name_plural = "Main page visits"

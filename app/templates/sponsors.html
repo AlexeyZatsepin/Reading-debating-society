@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
+{% load imagekit %}
 {% block main %}
-    {% load staticfiles %}
      <main>
 
        <section class="site_main">
@@ -13,7 +14,9 @@
                         {% endif %}
                     <div class="col-sm-4">
 					<div class="welcome sponsors_block {% if forloop.last %} debating_info{% endif %}">
-				        <a href="{{ sponsors.get_link }}"><img src="{{ sponsor.image.url }}" alt="sponsor_logo"></a>
+				        <a href="{{ sponsors.get_link }}">
+                            {% thumbnail '310x100' sponsor.image -- alt="{{ sponsor.name }}" %}
+                        </a>
                         <p><span>{{ sponsor.name }}</span>
                         {{ sponsor.description }}
                     </div>

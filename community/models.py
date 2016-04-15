@@ -3,7 +3,7 @@ from django.db import models
 
 
 class Committee(models.Model):
-    class Meta():
+    class Meta:
         db_table = "Committee"
 
     def __str__(self):
@@ -16,18 +16,18 @@ class Committee(models.Model):
         return "/committee/%i/" % self.time
 
 
-class Committee_stuff(models.Model):
-    class Meta():
+class CommitteeMembers(models.Model):
+    class Meta:
         db_table = "Stuff"
         verbose_name = "member"
-        verbose_name_plural = "Stuff"
+        verbose_name_plural = "Committee members"
 
     def __str__(self):
         return self.name
 
-    name = models.CharField(max_length=50)
+    name = models.CharField(max_length=100)
     position = models.CharField(max_length=50)
-    discription = models.TextField(blank=True)
+    description = models.TextField(blank=True)
     image = models.ImageField(upload_to='images', blank=True,
                               help_text="Photo must be round or square! You can can make photo round at cutmypic.com")
     committee = models.ForeignKey(Committee)
@@ -43,7 +43,7 @@ class Committee_stuff(models.Model):
 
 
 class Alumni(models.Model):
-    class Meta():
+    class Meta:
         db_table = "Alumni"
         verbose_name_plural = 'Alumnies'
 

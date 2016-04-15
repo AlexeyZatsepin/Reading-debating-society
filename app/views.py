@@ -6,8 +6,9 @@ from .models import *
 from staticArticles.models import Flatblock
 from materials.models import Material, Event
 from gallery.models import Album
+#from celery import task
 
-
+"""
 def search_form(func):
     def wrapped(**kwargs):
         form = SearchForm()
@@ -15,8 +16,9 @@ def search_form(func):
         return func(**kwargs)
 
     return wrapped
+"""
 
-
+#@task
 def counter():
     visit = Visits()
     visit.save()
@@ -36,14 +38,16 @@ def index(request):
 
 @cache_page(60 * 2)
 def debating(request):
-    args = {'flatblock': Flatblock.objects.get(title='debating'), 'search': SearchForm(), 'searchMobile':SearchFormMobile(), 'title': "Debating",
+    args = {'flatblock': Flatblock.objects.get(title='debating'), 'search': SearchForm(),
+            'searchMobile': SearchFormMobile(), 'title': "Debating",
             'debating': True}
     return render_to_response('debating.html', args)
 
 
 @cache_page(60 * 2)
 def sponsors(request):
-    args = {'sponsors': Sponsor.objects.all(), 'search': SearchForm(), 'searchMobile':SearchFormMobile(), 'title': "Our sponsors", 'sponsors_page': True}
+    args = {'sponsors': Sponsor.objects.all(), 'search': SearchForm(), 'searchMobile': SearchFormMobile(),
+            'title': "Our sponsors", 'sponsors_page': True}
     return render_to_response('sponsors.html', args)
 
 
@@ -52,7 +56,8 @@ def contact(request):
     from django.core.mail import send_mail
     # args.update(csrf(request))
     form = ContactForm(request.POST or None)
-    args = {'form': form, 'search': SearchForm(), 'searchMobile':SearchFormMobile(), 'title': "Contact us", 'contact': True}
+    args = {'form': form, 'search': SearchForm(), 'searchMobile': SearchFormMobile(), 'title': "Contact us",
+            'contact': True}
     if form.is_valid() and request.method == 'POST':
         subject = form.cleaned_data['subject']
         sender = form.cleaned_data['sender']
@@ -78,7 +83,7 @@ def search(request):
     gallery_result = Album.objects.filter(
         Q(title__contains=request.GET['field']) | Q(year__contains=request.GET['field']))
     args = {'materials': materials_result, 'events': events_result, 'albums': gallery_result, 'search': SearchForm(),
-            'searchMobile':SearchFormMobile(),'title': title}
+            'searchMobile': SearchFormMobile(), 'title': title}
     return render_to_response('search.html', args)
 
 

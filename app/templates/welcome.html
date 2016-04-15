@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
+{% load imagekit %}
 {% block main %}
  <main>
        {% if slider %}
@@ -10,8 +11,11 @@
            
 							<div id="owl-demo">
                                 {% for slide in slider %}
-                                <div class="item"><a class="fancybox" data-fancybox-group="group" href="{{ slide.image.url }}">
-                                    <img src="{{ slide.image.url }}" alt="Image"></a></div>
+                                <div class="item">
+                                    <a class="fancybox" data-fancybox-group="group" href="{{ slide.image.url }}">
+                                        {% thumbnail '450x300' slide.image%}
+                                    </a>
+                                </div>
 						        {% endfor %}
                             </div>                
 		
@@ -23,14 +27,9 @@
 			<div class="row">
 				<div class="col-sm-7 col-md-8">
 					<div class="welcome clearfix">
-							
-								
 									<h2>Welcome!</h2>
 									<img src="{% static  'img/graduate-icon.png' %}" alt="alt" width="140" height="90">
-								
 								    {{ flatblock.content|safe }}
-
-						
 					</div>
 				</div>
 				<div class="col-sm-5 col-md-4">

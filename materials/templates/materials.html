@@ -14,7 +14,7 @@
 									<p>The Reading Debating Society is one of the largest, friendliest, and most successful debating institutions, both nationally and across Europe. We are also one of the largest societies at Warwick, and have been a top 3 society every year since 2010.</p>
                                     <p>Everyone is welcome to join. We will support you with expert training, friendly sessions, and fun socials – scroll down to read more about it!</p>
 
-                                    <a href="#" class="learn_button hvr-wobble-horizontal">Learn more</a>
+                                    <a href="{% url 'workshops' %}" class="learn_button hvr-wobble-horizontal">Learn more</a>
 					</div>
 				</div>
 				<div class="col-md-6">
@@ -25,7 +25,8 @@
 
                         <div class="effect-2">
                             {% for material in materials %}
-                               <a href="{{ material.get_download_url }}" class="learn_link">{{ material.title }}</a>
+                               <a href="{{ material.get_download_url }}" class="learn_link" title="{{ material.description }}">{{ material.title }}
+                                <i class="fa fa-clock-o"></i><span>{{ material.date|date:"M d, Y" }}</span></a>
                             {% empty %}
                             <a href="#" class="learn_link">Training-1-Introduction-to-BP-debating</a>
                             <a href="#" class="learn_link">Training-2-Role-fulfillment </a>

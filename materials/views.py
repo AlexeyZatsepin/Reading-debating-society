@@ -1,15 +1,16 @@
+from __builtin__ import file
 from django.shortcuts import render_to_response
 import os
 from django.views.decorators.cache import cache_page
-
 from app.forms import SearchForm, SearchFormMobile
 from config import settings
-from materials.models import Material, Event
+from materials.models import Material, Event, Workshops
 
 
 @cache_page(60 * 3)
 def materials(request):
-    args = {'materials': Material.objects.all(), 'search': SearchForm(), 'searchMobile': SearchFormMobile(), 'title': "Helpful articles",'lm':True}
+    args = {'materials': Material.objects.all(), 'search': SearchForm(), 'searchMobile': SearchFormMobile(),
+            'title': "Helpful articles", 'lm': True}
     return render_to_response('materials.html', args)
 
 
@@ -22,13 +23,16 @@ def events(request):
     end_day = Event.objects.all().aggregate(Max('when')).values()
     args = {'previous': Event.objects.filter(when__range=[start_day[0], today]),
             'upcoming': Event.objects.filter(when__range=[today, end_day[0]]),
-            'search': SearchForm(), 'searchMobile': SearchFormMobile(), 'title':"Events",'e': True}
+            'search': SearchForm(), 'searchMobile': SearchFormMobile(), 'title': "Events", 'e': True}
     return render_to_response('events.html', args)
 
 
-def event(request, id):
-    args = {'event': Event.objects.get(id=id), 'search': SearchForm(), 'searchMobile': SearchFormMobile()}
-    return render_to_response('event.html', args)
+@cache_page(60 * 10)
+def workshops(request):
+    #years = sorted(list(set(Workshops.objects.values_list('timestamp', flat=True))))
+    args = {'workshops': Workshops.objects.all(), 'search': SearchForm(), 'searchMobile': SearchFormMobile(),
+            'title': 'Workshops', 'loadmore': True}
+    return render_to_response('workshops.html', args)
 
 
 def download(request, file_name):

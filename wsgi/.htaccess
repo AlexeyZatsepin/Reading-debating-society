@@ -1,4 +1,5 @@
 RewriteEngine On
+RewriteRule ^application/static/(.+)$ /static/$1 [L]
 RewriteRule ^application/media/(.+)$ /static/media/$1 [L]
 
 <IfModule mod_expires.c>
@@ -19,8 +20,10 @@ ExpiresDefault "access plus 2 days"
 RewriteCond %{HTTP_USER_AGENT} libwww-perl.*
 RewriteRule .* ? [F,L]
 
-RewriteCond %{HTTP_HOST} ^www\.example\.com$
-RewriteRule ^/?$ "http\:\/\/example\.com\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^www\.new-zatsepin\.rhcloud.com$
+RewriteRule ^/?$ "http\:\/\/new-zatsepin\.rhcloud.com\/" [R=301,L]
+
+
 #FileETag MTime Size
 #ExpiresActive On
 #ExpiresDefault “access plus 7 days”
