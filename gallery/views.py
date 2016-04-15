@@ -1,4 +1,4 @@
-from django.shortcuts import render_to_response, get_object_or_404, get_list_or_404
+from django.shortcuts import render_to_response, get_list_or_404
 from django.views.decorators.cache import cache_page
 
 from app.forms import SearchForm, SearchFormMobile
