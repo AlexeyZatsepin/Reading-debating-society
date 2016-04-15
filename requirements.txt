@@ -10,4 +10,3 @@ django-treebeard==3.0
 django-widget-tweaks==1.4.1
 Pillow==2.8.2
 python-dateutil==1.5
-six-1.10.0

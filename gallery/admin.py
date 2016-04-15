@@ -1,9 +1,8 @@
 from django.contrib import admin
-from image_cropping import ImageCroppingMixin
 from .models import Album, Photo
 
 
-class AlbumAdmin(ImageCroppingMixin,admin.ModelAdmin):
+class AlbumAdmin(admin.ModelAdmin):
     list_display = ('get_image', 'year', 'title')
     list_filter = ['year']
     search_fields = ['title']
