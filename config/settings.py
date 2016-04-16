@@ -93,8 +93,10 @@ if ON_OPENSHIFT:
         'default': {
             'ENGINE': 'django.db.backends.mysql',
             'NAME': 'new',
-            'USER': os.getenv('OPENSHIFT_MYSQL_DB_USERNAME'),
-            'PASSWORD': os.getenv('OPENSHIFT_MYSQL_DB_PASSWORD'),
+            'USER': 'admindeVZjvF',
+            #os.getenv('OPENSHIFT_MYSQL_DB_USERNAME'),
+            'PASSWORD': '_uxIA7vF8MS5',
+            #os.getenv('OPENSHIFT_MYSQL_DB_PASSWORD'),
             'HOST': os.getenv('OPENSHIFT_MYSQL_DB_HOST'),
             'PORT': os.getenv('OPENSHIFT_MYSQL_DB_PORT'),
         }
