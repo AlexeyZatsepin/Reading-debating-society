@@ -13,7 +13,7 @@
                                 {% for slide in slider %}
                                 <div class="item">
                                     <a class="fancybox" data-fancybox-group="group" href="{{ slide.image.url }}">
-                                        {% thumbnail '450x300' slide.image%}
+                                        {% thumbnail '400x250' slide.image -- alt="Debating Society" %}
                                     </a>
                                 </div>
 						        {% endfor %}

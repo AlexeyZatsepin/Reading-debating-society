@@ -23,6 +23,8 @@ RewriteRule .* ? [F,L]
 RewriteCond %{HTTP_HOST} ^www\.new-zatsepin\.rhcloud.com$
 RewriteRule ^/?$ "http\:\/\/new-zatsepin\.rhcloud.com\/" [R=301,L]
 
+ServerSignature Off
+ServerTokens Prod
 
 #FileETag MTime Size
 #ExpiresActive On

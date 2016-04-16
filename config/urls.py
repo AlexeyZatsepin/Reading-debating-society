@@ -15,10 +15,14 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.contrib.sitemaps import GenericSitemap
 from django.http import HttpResponse
+from django.contrib.sitemaps.views import sitemap
 
+from .sitemap import sitemaps
 from . import settings
 from django.conf.urls.static import static
+
 
 urlpatterns = [
                   url(r'^admin/', admin.site.urls),
@@ -26,7 +30,9 @@ urlpatterns = [
                   url(r'^gallery/', include('gallery.urls')),
                   url(r'^community/', include('community.urls')),
                   url(r'^materials/', include('materials.urls')),
-                  url(r'^robots.txt$', lambda r: HttpResponse("User-agent: *\nDisallow: /", mimetype="text/plain")),
+                  url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps},
+                      name='django.contrib.sitemaps.views.sitemap'),
+                  url(r'^robots.txt/$', lambda r: HttpResponse("User-agent: *\nDisallow: /*\nDisallow: /admin/")),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 '''+ static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
 '''

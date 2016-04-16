@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'googlecharts',
     'widget_tweaks',
     'imagekit',
+    'django.contrib.sitemaps',
 ]
 
 MIDDLEWARE_CLASSES = [
