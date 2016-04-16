@@ -79,7 +79,7 @@ def search(request):
     materials_result = Material.objects.filter(Q(title__contains=request.GET['field']))
     events_result = Event.objects.filter(
         Q(title__contains=request.GET['field']) | Q(when__contains=request.GET['field']) |
-        Q(short_discription__contains=request.GET['field']))
+        Q(description__contains=request.GET['field']))
     gallery_result = Album.objects.filter(
         Q(title__contains=request.GET['field']) | Q(year__contains=request.GET['field']))
     args = {'materials': materials_result, 'events': events_result, 'albums': gallery_result, 'search': SearchForm(),
