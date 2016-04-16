@@ -19,7 +19,7 @@ class Committee(models.Model):
 class CommitteeMembers(models.Model):
     class Meta:
         db_table = "Stuff"
-        verbose_name = "member"
+        verbose_name = "Member"
         verbose_name_plural = "Committee members"
 
     def __str__(self):
