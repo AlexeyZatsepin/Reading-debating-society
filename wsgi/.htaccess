@@ -1,6 +1,6 @@
 RewriteEngine On
 RewriteRule ^application/static/(.+)$ /static/$1 [L]
-RewriteRule ^application/media/(.+)$ /static/media/$1 [L]
+RewriteRule ^application/media/(.+)$ /media/$1 [L]
 
 <IfModule mod_expires.c>
 ExpiresActive On
