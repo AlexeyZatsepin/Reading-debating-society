@@ -1,78 +1,68 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block main %}
-     <main>
-
-       <section class="site_main">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8">
-					<div class="welcome debating_info clearfix">
-
-									<h2>Let's talk</h2>
-
-									<i class="fa fa-envelope"></i>
-                            {% if thanks %}
-                            <div class="info_window">
-                                <i class="fa fa-info-circle"></i>{{ thanks }}
-                            </div>
-                            {% endif %}
-
-
-                        <div class="form_block">
-                        <form action="{% url 'contact' %}" method="post">
-                            <div class="hidden_group">
-                            {% csrf_token %}
-                            </div>
-                            <div class="input_group">
-                              {{ form.subject }}
-                              <span class="highlight"></span>
-                              <span class="bar"></span>
-                              <span class="error">{{ form.subject.errors }}</span>
-                              <label>Subject</label>
-                            </div>
-
-                           <div class="input_group">
-                              {{ form.sender }}
-                              <span class="highlight"></span>
-                              <span class="bar"></span>
-                              <span class="error">{{ form.sender.errors }}</span>
-                              <label>Your email (user@example.com)</label>
-                            </div>
-
-                            <div class="input_group textarea_block">
-                              {{ form.message }}
-                              <span class="highlight"></span>
-                              <span class="bar"></span>
-                              <span class="error">{{ form.message.errors }}</span>
-                              <label>Message</label>
-                            </div>
-
-                            <input class="button button_checkdb" type="submit" value="Send">
-
-                        </form>
-                    </div>
-
-					</div>
-				</div>
-				<div class="col-md-4">
-					<aside class="right_aside debating_right_aside contact_aside">
-                       <h2>Contact information</h2>
-                        <p><span class="p_bold">Our email:</span>  <span class="email_span">readingdebatesociety@gmail.com</span></p>
-                        <!-- CHANGE BLOCK --><p><i class="fa fa-location-arrow"></i><span class="p_bold"> Postal address:</span> <br><!-- END CHANGE BLOCK -->
-                        Debate Society<br>
-                        Reading University Students' Union<br>
-                        PO Box 230<br>
-                        Whiteknights<br>
-                        Reading<br>
-                        RG6 6AZ<br>
-                        </p>
-					</aside>
-				</div>
-			</div>
-		</div>
-	</section>
-
-    </main>
-
+<main>
+   <section class="site_main">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-8">
+               <div class="welcome debating_info clearfix">
+                  <h2>Let's talk</h2>
+                  <i class="fa fa-envelope"></i>
+                  {% if thanks %}
+                  <div class="info_window">
+                     <i class="fa fa-info-circle"></i>{{ thanks }}
+                  </div>
+                  {% endif %}
+                  <div class="form_block">
+                     <form action="{% url 'contact' %}" method="post">
+                        <div class="hidden_group">
+                           {% csrf_token %}
+                        </div>
+                        <div class="input_group">
+                           {{ form.subject }}
+                           <span class="highlight"></span>
+                           <span class="bar"></span>
+                           <span class="error">{{ form.subject.errors }}</span>
+                           <label>Subject</label>
+                        </div>
+                        <div class="input_group">
+                           {{ form.sender }}
+                           <span class="highlight"></span>
+                           <span class="bar"></span>
+                           <span class="error">{{ form.sender.errors }}</span>
+                           <label>Your email (user@example.com)</label>
+                        </div>
+                        <div class="input_group textarea_block">
+                           {{ form.message }}
+                           <span class="highlight"></span>
+                           <span class="bar"></span>
+                           <span class="error">{{ form.message.errors }}</span>
+                           <label>Message</label>
+                        </div>
+                        <input class="button button_checkdb" type="submit" value="Send">
+                     </form>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-4">
+               <aside class="right_aside debating_right_aside contact_aside">
+                  <h2>Contact information</h2>
+                  <p><span class="p_bold">Our email:</span>  <span class="email_span">readingdebatesociety@gmail.com</span></p>
+                  <!-- CHANGE BLOCK -->
+                  <p>
+                     <i class="fa fa-location-arrow"></i><span class="p_bold"> Postal address:</span> <br><!-- END CHANGE BLOCK -->
+                     Debate Society<br>
+                     Reading University Students' Union<br>
+                     PO Box 230<br>
+                     Whiteknights<br>
+                     Reading<br>
+                     RG6 6AZ<br>
+                  </p>
+               </aside>
+            </div>
+         </div>
+      </div>
+   </section>
+</main>
 {% endblock %}

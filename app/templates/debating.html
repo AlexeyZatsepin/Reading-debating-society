@@ -1,32 +1,27 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block main %}
-
-    <main>
-
-       <section class="site_main">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8">
-					<div class="welcome debating_info clearfix">
-
-
-									<h2>How to debate</h2>
-									<img src="{% static 'img/Info-icon.png'%}" alt="alt" width="52" height="50">
-                                    {{ flatblock.content|safe }}
-					</div>
-				</div>
-				<div class="col-md-4">
-					<aside class="right_aside debating_right_aside">
-                     <div class="twitter_widget">
-                      <a class="twitter-timeline" href="https://twitter.com/UniofReading" data-widget-id="700486111513092096">Твиты от @UniofReading</a>
-<script async>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                      </div>
-					</aside>
-				</div>
-			</div>
-		</div>
-	</section>
-
-    </main>
+<main>
+   <section class="site_main">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-8">
+               <div class="welcome debating_info clearfix">
+                  <h2>How to debate</h2>
+                  <img src="{% static 'img/Info-icon.png'%}" alt="alt" width="52" height="50">
+                  {{ flatblock.content|safe }}
+               </div>
+            </div>
+            <div class="col-md-4">
+               <aside class="right_aside debating_right_aside">
+                  <div class="twitter_widget">
+                     <a class="twitter-timeline" href="https://twitter.com/UniofReading" data-widget-id="700486111513092096">Твиты от @UniofReading</a>
+                     <script async>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                  </div>
+               </aside>
+            </div>
+         </div>
+      </div>
+   </section>
+</main>
 {% endblock %}

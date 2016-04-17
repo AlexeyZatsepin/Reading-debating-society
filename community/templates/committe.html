@@ -2,65 +2,55 @@
 {% load staticfiles %}
 {% load imagekit %}
 {% block main %}
-    <main>
-        <section class="site_main">
-		  <div class="container">
-			<div class="row">
-				<div class="col-md-9">
-					<div class="committee_block">
-                    {% if "Current" in title %}
-                        <h2>Current Committee</h2>
+<main>
+   <section class="site_main">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-9">
+               <div class="committee_block">
+                  {% if "Current" in title %}
+                  <h2>Current Committee</h2>
+                  {% else %}
+                  <h2>Commitee of {{ com.time }}</h2>
+                  {% endif %}
+                  {% for member in stuff %}
+                  <div class="item_item clearfix">
+                     <div class="item_media">
+                        {% if member.image %}
+                        {% thumbnail '300x300'  member.image -- alt="{{ member.last_name }}" %}
                         {% else %}
-                        <h2>Commitee of {{ com.time }}</h2>
-                    {% endif %}
-                        {% for member in stuff %}
-                        <div class="item_item clearfix">
-                            <div class="item_media">
-                                {% if member.image %}
-                                   {% thumbnail '300x300'  member.image -- alt="{{ member.last_name }}" %}
-                                {% else %}
-                                    <div class="item_media"><i class="fa fa-user"></i></div>
-                                {% endif %}
-                            </div>
-
-                            <div class="item_main">
-                                <span class="position">
-                                    {{ member.position }}</span>
-                               <h2>{{ member.name }}</h2>
-                               <div class="item_info">
-                                <p>{{ member.description }}
-                               </div>
-
-                            </div>
+                        <div class="item_media"><i class="fa fa-user"></i></div>
+                        {% endif %}
+                     </div>
+                     <div class="item_main">
+                        <span class="position">
+                        {{ member.position }}</span>
+                        <h2>{{ member.name }}</h2>
+                        <div class="item_info">
+                           <p>{{ member.description }}
                         </div>
-                        {% empty %}
-                            <p>Please add stuff in admin page</p>
-                        {% endfor %}
-
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-					<aside class="year_aside debating_info">
-                    {% if "Current" not in title %}
-                    <h2 class="p_bold"><a href="{% url 'committee' %}">Current Committee</a></h2>
-                    {% endif %}
-                     <h2 class="p_bold">Previous Committees</h2>
-                        {% for item in years %}
-                        <a href="/community/{{ item }}" class="year_button hvr-sweep-to-bottom">{{ item }}</a>
-                            {% empty %}
-                            <p> no commities</p>
-                        {% endfor %}
-					</aside>
-				</div>
-
-              </div>
+                     </div>
+                  </div>
+                  {% empty %}
+                  <p>Please add stuff in admin page</p>
+                  {% endfor %}
+               </div>
             </div>
-
-
-
-
-
-	</section>
-    </main>
+            <div class="col-md-3">
+               <aside class="year_aside debating_info">
+                  {% if "Current" not in title %}
+                  <h2 class="p_bold"><a href="{% url 'committee' %}">Current Committee</a></h2>
+                  {% endif %}
+                  <h2 class="p_bold">Previous Committees</h2>
+                  {% for item in years %}
+                  <a href="/community/{{ item }}" class="year_button hvr-sweep-to-bottom">{{ item }}</a>
+                  {% empty %}
+                  <p> no commities</p>
+                  {% endfor %}
+               </aside>
+            </div>
+         </div>
+      </div>
+   </section>
+</main>
 {% endblock %}

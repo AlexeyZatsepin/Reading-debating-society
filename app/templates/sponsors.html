@@ -2,36 +2,33 @@
 {% load staticfiles %}
 {% load imagekit %}
 {% block main %}
-     <main>
-
-       <section class="site_main">
-       <h1>Section identifying heading</h1>
-		<div class="container">
-
-                    {% for sponsor in sponsors %}
-                        {% if forloop.counter|divisibleby:"3" %}
-                        <div class="row">
-                        {% endif %}
-                    <div class="col-sm-4">
-					<div class="welcome sponsors_block {% if forloop.last %} debating_info{% endif %}">
-				        <a href="{{ sponsors.get_link }}">
-                            {% thumbnail '310x100' sponsor.image -- alt="{{ sponsor.name }}" %}
-                        </a>
-                        <p><span>{{ sponsor.name }}</span>
-                        {{ sponsor.description }}
-                    </div>
-				    </div>
-                    {% if forloop.counter|divisibleby:"3" %}
-                        </div>
-                        {% endif %}
-                    {% empty %}
-                        <div class="info_window">
-                            <i class="fa fa-info-circle"></i>
-                            Please add sponsors at admin page
-                            </div>
-                    {% endfor %}
-		</div>
-	</section>
-
-    </main>
+<main>
+   <section class="site_main">
+      <h1>Section identifying heading</h1>
+      <div class="container">
+         {% for sponsor in sponsors %}
+         {% if forloop.counter|divisibleby:"3" %}
+         <div class="row">
+            {% endif %}
+            <div class="col-sm-4">
+               <div class="welcome sponsors_block {% if forloop.last %} debating_info{% endif %}">
+                  <a href="{{ sponsors.get_link }}">
+                  {% thumbnail '310x100' sponsor.image -- alt="{{ sponsor.name }}" %}
+                  </a>
+                  <p><span>{{ sponsor.name }}</span>
+                     {{ sponsor.description }}
+               </div>
+            </div>
+            {% if forloop.counter|divisibleby:"3" %}
+         </div>
+         {% endif %}
+         {% empty %}
+         <div class="info_window">
+            <i class="fa fa-info-circle"></i>
+            Please add sponsors at admin page
+         </div>
+         {% endfor %}
+      </div>
+   </section>
+</main>
 {% endblock %}

@@ -2,49 +2,47 @@
 {% load staticfiles %}
 {% load imagekit %}
 {% block main %}
-    <main>
-        <section class="site_main">
-        <h1>Section identifying heading</h1>
-		<div class="container">
-			<div class="row">
-                {% if albums %}
-                <div class="col-md-2">
-					<aside class="year_aside">
-                     <h2 class="p_bold">Sort albums by year</h2>
-                        {% for year in years %}
-                        <a href="/gallery/{{ year }}/" class="year_button hvr-sweep-to-bottom">{{ year }}</a>
-                        {% endfor %}
-					</aside>
-				</div>
-
-                <div class="col-md-10">
-                    {% for album in albums %}
-				<div class="col-sm-6">
-					<div class="gallery_block clearfix {% if forloop.last %} debating_info{% endif %}">
-				        <a href="{{ album.get_absolute_url }}">
-                            {% thumbnail '400x240'  album.cover %}</a>
-                        <div class="gallery_block_left">
-                            <i class="fa fa-camera"></i>
-                            <span class="hint">Album</span>
-                            <span>{{ album.title }}</span>
-                        </div>
-                        <div class="gallery_block_right">
-                            <i class="fa fa-clock-o"></i>
-                            <span>{{ album.year }}</span>
-                        </div>
-					</div>
-				</div>
-                    {% endfor %}
-                </div>
-            {% else %}
-                  <div class="info_window">
-                            <i class="fa fa-info-circle"></i>
-                            Please add albums at admin page
+<main>
+   <section class="site_main">
+      <h1>Section identifying heading</h1>
+      <div class="container">
+         <div class="row">
+            {% if albums %}
+            <div class="col-md-2">
+               <aside class="year_aside">
+                  <h2 class="p_bold">Sort albums by year</h2>
+                  {% for year in years %}
+                  <a href="/gallery/{{ year }}/" class="year_button hvr-sweep-to-bottom">{{ year }}</a>
+                  {% endfor %}
+               </aside>
+            </div>
+            <div class="col-md-10">
+               {% for album in albums %}
+               <div class="col-sm-6">
+                  <div class="gallery_block clearfix {% if forloop.last %} debating_info{% endif %}">
+                     <a href="{{ album.get_absolute_url }}">
+                     {% thumbnail '400x240'  album.cover %}</a>
+                     <div class="gallery_block_left">
+                        <i class="fa fa-camera"></i>
+                        <span class="hint">Album</span>
+                        <span>{{ album.title }}</span>
+                     </div>
+                     <div class="gallery_block_right">
+                        <i class="fa fa-clock-o"></i>
+                        <span>{{ album.year }}</span>
+                     </div>
                   </div>
+               </div>
+               {% endfor %}
+            </div>
+            {% else %}
+            <div class="info_window">
+               <i class="fa fa-info-circle"></i>
+               Please add albums at admin page
+            </div>
             {% endif %}
-             </div>
-		</div>
-	</section>
-
-    </main>
+         </div>
+      </div>
+   </section>
+</main>
 {% endblock %}

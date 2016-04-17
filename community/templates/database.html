@@ -2,97 +2,98 @@
 {% load staticfiles %}
 {% load imagekit %}
 {% block main %}
-    <main>
-        <section class="site_main">
-		  <div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="committee_block">
-                    <h2><i class="fa fa-database"></i>Alumni Database</h2>
-
-                         <ul class="filter">
-                                <li><a href="#">Years <i class="fa fa-sort-desc"></i></a>
-                                    <ul class="sub-filter">
-                                        {% for year in years %}
-                                            {% if year == '' %}
-                                            {% else %}
-                                        <li><a href="/community/db/{{ year }}/">{{ year }}</a></li>
-                                            {% endif %}
-                                        {% endfor %}
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">Course <i class="fa fa-sort-desc"></i></a>
-                                    <ul class="sub-filter">
-                                        {% for course in courses %}
-                                            {% if course == '' %}
-                                                {% else %}
-                                        <li><a href="/community/db/{{ course }}/">{{ course }}</a></li>
-                                            {% endif %}
-                                        {% endfor %}
-                                    </ul>
-                                </li>
-                                <li><a href="#">Company <i class="fa fa-sort-desc"></i></a>
-                                    <ul class="sub-filter">
-                                        {% for company in companies %}
-                                            {% if company == '' %}
-                                                {% else %}
-                                        <li><a href="/community/database/{{ company }}/">{{ company }}</a></li>
-                                            {% endif %}
-                                        {% endfor %}
-                                    </ul>
-                                </li>
-                         </ul>
-                        {% if thanks %}
-                            <div class="info_window">
-                            <i class="fa fa-info-circle"></i>{{ thanks }}
-                            </div>
-                        {% endif %}
-                        <ul id="myList">
-                        {% for member in db %}
-                        <li>
-                        <div class="bgr clearfix">
-                            <div class="item_media">
-                            <a href="mailto:{{ member.email }}" title="Click to send email to {{ member }}">
-                                {% if member.image %}
-                                    {% thumbnail '300x300'  member.image -- alt="{{ member.last_name }}" %}
-                                    {#<!--<img src="{{ member.image.url }}" alt="{{ member.last_name }}" >-->#}
-                                {% else %}
-                                    <i class="fa fa-user"></i>
-                                {% endif %}
-                            </a>
-                            </div>
-                            <div class="item_main">
-                               <h2>{{ member }}</h2>
-                               <div class="item_info">
-                                   <i class="fa fa-calendar"></i><span class="p_bold">Years at society:</span> {{ member.time_in_society }}<br>
-                                   <i class="fa fa-university"></i><span class="p_bold">Course studied at Reading:</span> {{ member.courses }}<br>
-                                   <i class="fa fa-building"></i><span class="p_bold">Current Company:</span> {{ member.current_occupation }}<br>
-                                   <i class="fa fa-envelope"></i><span class="p_bold">Email:</span> {{ member.email }}<br>
-                                   <a class="alumni_link" href="{{ member.facebook }}">
-                                        <i class="fa fa-facebook"></i>
-                                   </a>
-                                   <a class="alumni_link linkedin" href="{{ member.linkedin }}">
-                                        <i class="fa fa-linkedin"></i>
-                                   </a>
-                               </div>
-                            </div>
-                        </div>
-                        </li>
-                        {% empty %}
-                            <div class="info_window">
-                            <i class="fa fa-info-circle"></i>
-                            Database is empty.
-                            </div>
-                        {% endfor %}
+<main>
+   <section class="site_main">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <div class="committee_block">
+                  <h2><i class="fa fa-database"></i>Alumni Database</h2>
+                  <ul class="filter">
+                     <li>
+                        <a href="#">Years <i class="fa fa-sort-desc"></i></a>
+                        <ul class="sub-filter">
+                           {% for year in years %}
+                           {% if year == '' %}
+                           {% else %}
+                           <li><a href="/community/db/{{ year }}/">{{ year }}</a></li>
+                           {% endif %}
+                           {% endfor %}
                         </ul>
-                    {% if db|length > 3 %}
-                        <div id="loadMore" class="learn_button hvr-wobble-horizontal"><i class="fa fa-refresh"></i>Load more</div>
-                    {% endif %}
-                    </div>
-                </div>
-              </div>
+                     </li>
+                     <li>
+                        <a href="#">Course <i class="fa fa-sort-desc"></i></a>
+                        <ul class="sub-filter">
+                           {% for course in courses %}
+                           {% if course == '' %}
+                           {% else %}
+                           <li><a href="/community/db/{{ course }}/">{{ course }}</a></li>
+                           {% endif %}
+                           {% endfor %}
+                        </ul>
+                     </li>
+                     <li>
+                        <a href="#">Company <i class="fa fa-sort-desc"></i></a>
+                        <ul class="sub-filter">
+                           {% for company in companies %}
+                           {% if company == '' %}
+                           {% else %}
+                           <li><a href="/community/database/{{ company }}/">{{ company }}</a></li>
+                           {% endif %}
+                           {% endfor %}
+                        </ul>
+                     </li>
+                  </ul>
+                  {% if thanks %}
+                  <div class="info_window">
+                     <i class="fa fa-info-circle"></i>{{ thanks }}
+                  </div>
+                  {% endif %}
+                  <ul id="myList">
+                     {% for member in db %}
+                     <li>
+                        <div class="bgr clearfix">
+                           <div class="item_media">
+                              <a href="mailto:{{ member.email }}" title="Click to send email to {{ member }}">
+                                 {% if member.image %}
+                                 {% thumbnail '300x300'  member.image -- alt="{{ member.last_name }}" %}
+                                 {#<!--<img src="{{ member.image.url }}" alt="{{ member.last_name }}" >-->#}
+                                 {% else %}
+                                 <i class="fa fa-user"></i>
+                                 {% endif %}
+                              </a>
+                           </div>
+                           <div class="item_main">
+                              <h2>{{ member }}</h2>
+                              <div class="item_info">
+                                 <i class="fa fa-calendar"></i><span class="p_bold">Years at society:</span> {{ member.time_in_society }}<br>
+                                 <i class="fa fa-university"></i><span class="p_bold">Course studied at Reading:</span> {{ member.courses }}<br>
+                                 <i class="fa fa-building"></i><span class="p_bold">Current Company:</span> {{ member.current_occupation }}<br>
+                                 <i class="fa fa-envelope"></i><span class="p_bold">Email:</span> {{ member.email }}<br>
+                                 <a class="alumni_link" href="{{ member.facebook }}">
+                                 <i class="fa fa-facebook"></i>
+                                 </a>
+                                 <a class="alumni_link linkedin" href="{{ member.linkedin }}">
+                                 <i class="fa fa-linkedin"></i>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </li>
+                     {% empty %}
+                     <div class="info_window">
+                        <i class="fa fa-info-circle"></i>
+                        Database is empty.
+                     </div>
+                     {% endfor %}
+                  </ul>
+                  {% if db|length > 3 %}
+                  <div id="loadMore" class="learn_button hvr-wobble-horizontal"><i class="fa fa-refresh"></i>Load more</div>
+                  {% endif %}
+               </div>
             </div>
-	</section>
-    </main>
+         </div>
+      </div>
+   </section>
+</main>
 {% endblock %}
