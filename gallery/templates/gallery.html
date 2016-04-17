@@ -16,7 +16,6 @@
                         {% endfor %}
 					</aside>
 				</div>
-                {% endif %}
 
                 <div class="col-md-10">
                     {% for album in albums %}
@@ -35,13 +34,14 @@
                         </div>
 					</div>
 				</div>
-                    {% empty %}
-                        <div class="info_window">
-                            <i class="fa fa-info-circle"></i>
-                            Please add albums at admin page
-                        </div>
                     {% endfor %}
                 </div>
+            {% else %}
+                  <div class="info_window">
+                            <i class="fa fa-info-circle"></i>
+                            Please add albums at admin page
+                  </div>
+            {% endif %}
              </div>
 		</div>
 	</section>
