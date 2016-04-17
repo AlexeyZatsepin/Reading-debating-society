@@ -7,7 +7,7 @@
         <h1>Section identifying heading</h1>
 		<div class="container">
 			<div class="row">
-
+                {% if albums %}
                 <div class="col-md-2">
 					<aside class="year_aside">
                      <h2 class="p_bold">Sort albums by year</h2>
@@ -16,6 +16,7 @@
                         {% endfor %}
 					</aside>
 				</div>
+                {% endif %}
 
                 <div class="col-md-10">
                     {% for album in albums %}
@@ -35,7 +36,10 @@
 					</div>
 				</div>
                     {% empty %}
-                        <p>NO ALBUMS IN DATABASE</p>
+                        <div class="info_window">
+                            <i class="fa fa-info-circle"></i>
+                            Please add albums at admin page
+                        </div>
                     {% endfor %}
                 </div>
              </div>
