@@ -1031,6 +1031,8 @@ transform: rotateY(0);
     position: relative;
     display: block;
     margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     text-decoration: none;
     font-family: "Effra-bold";
     font-size: 16px;
