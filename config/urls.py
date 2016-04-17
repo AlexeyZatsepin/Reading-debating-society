@@ -21,6 +21,7 @@ from .sitemap import sitemaps
 from . import settings
 from django.conf.urls.static import static
 
+handler404 = 'app.views.custom_404'
 
 urlpatterns = [
                   url(r'^admin/', admin.site.urls),
@@ -30,7 +31,7 @@ urlpatterns = [
                   url(r'^materials/', include('materials.urls')),
                   url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps},
                       name='django.contrib.sitemaps.views.sitemap'),
-                  url(r'^robots.txt/$', lambda r: HttpResponse("User-agent: *\nDisallow: /")),
+                  url(r'^robots.txt/$', lambda r: HttpResponse("User-agent: *\nDisallow: \nDisallow: /admin/ ")),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 '''+ static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
 '''

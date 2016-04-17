@@ -87,6 +87,10 @@ def search(request):
     return render_to_response('search.html', args)
 
 
+def custom_404():
+    return render_to_response('404.html')
+
+
 '''
 def info(request):
     from qsstats import QuerySetStats
