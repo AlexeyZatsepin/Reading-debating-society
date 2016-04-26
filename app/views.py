@@ -63,12 +63,12 @@ def contact(request):
         sender = form.cleaned_data['sender']
         message = form.cleaned_data['message']
         recipients = ['alexzatsepin@outlook.com', 'readingdebatesociety@gmail.com']
-        #try:
-        send_mail(subject, message, 'alexzatsepin7@gmail.com', recipients, fail_silently=False)
-        thanks = "Thank you %s! Your message was successfully sent." % sender
-        args.update({'thanks': thanks})
-        #except:
-        #   args['thanks'] = 'Try again, server overload'
+        try:
+            send_mail(subject, message, 'alexzatsepin7@gmail.com', recipients, fail_silently=False)
+            thanks = "Thank you %s! Your message was successfully sent." % sender
+            args.update({'thanks': thanks})
+        except:
+           args['thanks'] = 'Try again, server overload'
     return render(request, 'contact.html', args)
 
 
